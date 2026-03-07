@@ -272,10 +272,10 @@ width: 100%;
 {
   content: '';
   position: absolute;
-   top:-48px;
-   left: 75%;
-   width:240px;
-   height:240px;
+   top:-12px;
+   right: -24px;
+   width:120px;
+   height:120px;
    background-color: #172663;
    border-radius: 50%;
   z-index: -1;
