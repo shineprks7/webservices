@@ -323,12 +323,12 @@
           padding: 16px;
           box-sizing: border-box;
           position: fixed;
-          top:24px;
-          left:24px;
-          right: 24px;
+          top:0px;
+          left:0px;
+          right: 0px;
           z-index: 2000;
           height: calc(100vh - 0px);
-          width: calc(100% - 48px);
+          width: calc(100% - 0px);
           overflow-y: hidden;
 
 
