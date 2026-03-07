@@ -1,0 +1,120 @@
+*
+{
+    font-family: 'Inter';
+
+}
+
+.primary-serif
+
+{
+    font-family: 'Playfair Display';
+}
+
+.site-logo-text
+{
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 64px;
+          font-family: 'Inter' !important;
+
+          letter-spacing: 1.2px;
+
+    
+
+}
+
+.services-headline-part
+{
+    display: block;
+}
+
+
+
+h1, h2,h3,h4,h5,h6
+{
+    font-weight: bold;
+}
+
+p, div, span, li
+{
+  /* font-weight: normal; */
+  
+}
+
+h1, .heading-1
+{
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2, .heading-2
+{
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3, .heading-3
+{
+    font-size: 28px;
+    line-height: 36px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h4 , .heading-4
+{
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h5 , .heading-5
+{
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h5 , .heading-6
+{
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+p 
+{
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body .body-font-big
+{
+    font-size: 20px;
+    line-height: 24px;
+
+}
+
+.body-font-medium
+{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.body-font-small
+{
+    font-size: 16px;
+    line-height: 20px;
+}
+

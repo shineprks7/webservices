@@ -1,0 +1,98 @@
+
+.final-cta-wrapper
+{
+
+    background-color: #fff;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    border-top: 8px solid #2217bf ;
+
+    border-radius: 24px;
+
+    /* background-color: #2217bf; */
+
+ background-image: linear-gradient(to right, #e0e0e0 1px, transparent 1px),
+     linear-gradient(to bottom, #e0e0e0 1px, transparent 1px);
+
+     background-size: 40px 40px;
+
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.25);
+}
+
+
+.final-cta-center-wrapper
+{
+
+}
+
+.final-cta-center-wrapper-btn-row
+{
+    display: flex;
+    justify-content: center;
+    gap:24px;
+    flex-wrap: wrap;
+}
+
+.final-cta-center-wrapper .call-button
+
+{
+
+}
+
+.final-cta-center-wrapper .book-button
+
+{
+
+}
+
+
+.finalcta-info-icon-wrapper
+{
+    width: 36px;
+    height: 36px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    position: relative;
+    transform: scale(3);
+
+}
+.finalcta-info-icon-wrapper img
+
+{
+  width: 24px;
+  height: 24px;
+  transform: rotate(-90deg);
+}
+.finalcta-info-icon-wrapper::before
+{
+    content:"";
+    border: 1px dotted #fff;
+    position: absolute;
+
+    width: 32px;
+    height: 32px;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    
+
+    animation: rotatebordericonfinacta  linear 5s  infinite;
+
+
+}
+
+@keyframes rotatebordericonfinacta
+{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+              transform: rotate(360deg);
+  
+    }
+
+}

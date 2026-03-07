@@ -1,0 +1,129 @@
+.primary-bg
+{
+
+    background-color:#0C0840;
+    background-color:#0b0840;
+
+
+}
+.primary-font
+{
+
+    color:#0C0840; 
+
+
+
+
+}
+
+.secondary-bg
+{
+    background-color: #311291;
+}
+.secondary-font
+{
+    color: #311291;
+}
+
+.dark-primary-bg
+{
+    background-color: #01000e;
+}
+
+.dark-secondary-bg
+{
+    background-color: #08080c;
+}
+.dark-secondary-font
+{
+   color: #08080c;
+}
+
+
+
+.primary-shade-1-bg
+{
+    background-color:#1c139d;
+
+}
+.primary-shade-1-font
+{
+    color:#1c139d;
+
+}
+.primary-shade-2-bg
+{
+   background-color:#2217bf ;
+}
+.primary-shade-2-font
+{
+   color:#2217bf ;
+}
+.primary-shade-3-bg
+{
+   background-color:#281be1 ;
+}
+.primary-shade-3-font
+{
+   color:#281be1 ;
+}
+.light-primary-bg
+{
+    background-color: #fff;
+}
+.light-primary-font
+{
+    color: #fff;
+}
+
+.light-secondary-font
+{
+    color:#eae2b8;
+}
+
+.light-secondary-bg
+{
+    background-color:#bfab77;
+}
+
+.primary-grey-font
+{
+    color: #5b5b61;
+}
+
+.secondary-grey-font
+{
+    color: #ababac;
+}
+
+.accent-bg
+{
+    background-color: #F0BD17;
+        background-color: #403708;
+
+}
+.accent-font
+{
+    color:#F0BD17;
+        color:#403708;
+
+}
+
+.grey-border
+{
+    border: 1px solid #808080;
+}
+
+.brick-border
+{
+    border:1px solid #E05E3D;
+    
+}
+
+.grey-divider
+{
+    width: 100%;
+    height: 1px;
+    background-color: #808080;
+}
+

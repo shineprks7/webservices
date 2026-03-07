@@ -1,0 +1,602 @@
+
+
+*
+{
+    box-sizing: border-box;
+}
+
+.form-container
+{
+    padding: 48px 48px;
+
+
+}
+
+.tax-form-field-wrapper
+{
+    padding-left: 60px;
+}
+
+.taxform-heading-label
+{
+
+    font-size: 32px;
+    line-height: 40px;
+    
+
+}
+
+
+
+.taxform-input-field-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap:24px;
+    padding-bottom: 24px;
+
+}
+
+.taxform-grid-wrapper
+{
+  display: grid;
+  grid-template-columns: repeat(12, minmax(10px,1fr));
+
+  gap:24px
+
+}
+
+.taxform-grid-wrapper .taxform-grid-item
+
+
+{
+ grid-column: span 6;
+ 
+}
+
+.taxform-field-label
+{
+  font-size: 16px;
+  line-height: 18px;
+   font-weight: bold;
+
+  color: #061BAF;
+  width: 100%;
+
+  display: block;
+  height: 40px;
+  
+}
+
+.taxform-text-field-wrapper
+{
+    width: 100%;
+    border: 1px solid #808080;
+    border-radius: 12px;
+      box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+      background: #fffdfd;
+
+      display: flex;
+      padding: 12px;
+      align-items: center;
+
+      gap: 24px;
+
+}
+
+.taxform-text-field-wrapper .prefix-icon-wrapper img
+{
+
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+}
+
+.taxform-text-field-wrapper .prefix-icon-wrapper svg
+{
+
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+}
+
+.taxform-text-field-wrapper .text-field
+
+{
+  border: 0px;
+  outline:0px;
+    background-color: transparent;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+
+}
+
+taxform-text-field-wrapper .text-field::focus
+
+{
+  border: 0px;
+  outline:0px;
+  background-color: transparent;
+}
+
+taxform-text-field-wrapper .text-field::hover
+
+{
+  border: 0px;
+  outline:0px;
+  background-color: transparent;
+}
+
+.tax-form-options-wrapper
+{
+   max-width: 420px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.taxform-option-button
+{
+   padding: 24px 24px;
+
+   width: 100%;
+   text-align: center;
+
+   font-size: 24px;
+   line-height: 32px;
+
+   margin-top: 24px;
+   background-color: #fff;
+
+   cursor: pointer;
+         box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.25) ;
+
+   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.taxform-option-button:hover
+{
+      background-color: #fff;
+
+      color:#061BAF;
+      font-size: 1.2em;
+      font-weight: bold;
+
+      box-shadow: -8px -8px 8px 0px rgba(0,0,0,0.25) ;
+}
+
+.taxform-option-button.selected
+{
+    /* background-color: #6D52A4;
+    color:#fff; */
+
+     background-color: #fff;
+
+      color:#061BAF;
+      font-size: 1.2em;
+      font-weight: bold;
+
+      box-shadow: -8px -8px 8px 0px rgba(0,0,0,0.25) ;
+}
+
+.taxform-option-button:first-of-type
+{
+  margin-top: 0px;
+}
+
+.taxform-next-button
+{
+    background-color: #2B3BB8;
+    padding: 12px;
+    text-align: center;
+
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.taxform-progress-wrapper
+{
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(12,minmax(10px, 1fr));
+   
+    gap:0px;
+
+
+    padding: 0px;
+
+
+   /* overflow: hidden; */
+   color: #fff;
+
+   margin-top: 24px;
+   margin-bottom: 48px;
+
+}
+
+.taxform-grid-progress-part
+{
+     text-align: center;
+   font-size: 24px;
+   font-weight: bold;
+   padding: 16px 16px;
+   position: relative;
+  
+
+}
+.taxform-grid-progress-part::after
+{
+ 
+  content: '';
+
+  position: absolute;
+
+  width: 0px;
+  height: 0px;
+
+
+  top:100%;
+  left: 50%;
+
+  border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+   border-top: 24px solid #5A66BB;
+
+  transform: translate(-50%,0);
+
+  display: none;
+
+}
+
+.taxform-grid-progress-part.active::after 
+
+{
+  display: block;
+
+}
+.taxform-grid-progress-part-1
+{
+   grid-column: span 3;
+   background-color: #5A66BB;
+
+       border-top-left-radius: 12px;
+       border-bottom-left-radius: 12px;
+
+}
+.taxform-grid-progress-part-1::after
+{
+  border-top-color: #5A66BB ;
+}
+
+.taxform-grid-progress-part-2
+{
+      grid-column: span 3;
+    background-color: #2B3BB8;
+
+}
+
+.taxform-grid-progress-part-2::after
+{
+  border-top-color: #2B3BB8 ;
+}
+
+.taxform-grid-progress-part-3
+{
+       grid-column: span 3;
+    background-color: #061BAF;
+
+}
+
+.taxform-grid-progress-part-3::after
+{
+  border-top-color: #061BAF ;
+}
+
+.taxform-grid-progress-part-4
+{
+       grid-column: span 3;
+        grid-column: span 3;
+    background-color: #06af3e;
+ border-top-right-radius: 12px;
+       border-bottom-right-radius: 12px;
+
+}
+
+.taxform-grid-progress-part-4::after
+{
+  border-top-color: #06af3e ;
+}
+
+
+.taxform-result-grid-wrapper
+{
+  display: grid;
+  grid-template-columns: repeat(12, minmax(10px, 1fr));
+}
+.taxform-result-grid-item
+{
+  grid-column: span 6;
+}
+
+.taxform-results-card
+{
+  border-radius: 12px;
+  background-color: #fff;
+
+  padding: 24px;
+  margin-top: 48px;
+}
+
+.card-old-regime
+{
+  background-color: #F2AE0E;
+}
+.card-new-regime
+{
+  background-color: #fff;
+}
+.taxform-result-content
+{
+  padding: 48px;
+}
+
+.tax-payable-wrapper
+{
+  background-color: #4732A7;
+  color:#fff;
+  border-radius: 24px;
+
+}
+
+
+.taxform-results-card-title
+
+{
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+
+  margin-top:24px;
+  margin-bottom: 24px;
+
+  padding-left: 48px;
+
+  
+}
+
+
+.taxform-results-card-result-amount
+
+{
+
+   margin-top:24px;
+  margin-bottom: 24px;
+
+  
+  font-size: 32px;
+  line-height: 40px;
+    font-weight: bold;
+
+    color:#061BAF;
+
+  
+
+}
+
+.tax-payable-wrapper .taxform-results-card-result-amount
+
+{
+    color:#fff;
+}
+
+.breakdown-title
+{
+  font-size: 16px;
+
+  line-height: 20px;
+  font-weight: bold;
+
+}
+.breakdown-content
+{
+  padding: 0px;
+  margin: 0px;
+
+
+}
+.breakdown-item
+{
+    min-width: 240px;
+
+  margin-left: 8px;
+  font-size: 16px;
+
+  line-height: 20px;
+  font-weight: 400;
+  
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+
+  flex-wrap: wrap;
+
+  margin-top: 24px;
+
+  justify-content: space-between;
+
+   color:#000;
+  
+
+
+
+  
+}
+.breakdown-item span
+{
+  
+  display: inline-block;
+  width: 100%;
+  
+  font-style: italic;
+
+} 
+
+.breakdown-item .breakdown-item-data
+{
+  color:#061BAF;
+
+  font-style: normal;
+  font-weight: 500;
+}
+
+.tax-card-divider
+{
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+
+.article-list-item
+{
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.article-list-item
+{
+
+  font-size: 18px;
+  line-height: 24px;
+
+  margin-top: 24px;
+}
+
+.article-sublist-item
+{
+  font-size: 18px;
+  line-height: 24px;
+    margin-top: 24px;
+
+}
+
+.article-grid-table-wrapper
+{
+  width: 100%;
+  overflow-x: scroll;
+
+}
+.article-grid-table
+{
+  padding: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #ddd;
+
+  margin-top: 48px;
+  min-width: 600px;
+}
+
+.article-grid-row
+{
+  display: grid;
+
+  grid-template-columns: repeat(12, minmax(40px, 1fr));
+  
+
+}
+
+.article-grid-column
+{
+  grid-column: span 4;
+  padding: 12px;
+  border: 2px solid #fff;
+
+}
+
+.article-grid-column:first-of-type
+{
+  font-weight: bold;
+}
+
+.article-grid-row-header
+{
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.article-notes
+{
+  margin-top: 24px;
+  font-style: italic;
+  
+}
+.article-list-wrapper
+{
+  padding-left: 24px;
+}
+
+.article-sublist-wrapper
+{
+  padding-left: 24px;
+}
+
+@media (max-width:820px)  { 
+.taxform-grid-wrapper
+{
+
+  gap:0px;
+
+
+}
+  .taxform-grid-wrapper .taxform-grid-item
+
+
+  {
+
+    grid-column: span 12;
+  }
+
+  .taxform-result-grid-item
+{
+  grid-column: span 12;
+}
+
+.breakdown-item
+{
+    min-width: 240px;
+
+    width: 240px;
+
+}
+
+.taxform-result-content
+{
+  padding: 48px 24px;
+}
+.form-container
+{
+  padding: 48px 12px;
+}
+
+.taxform-results-card-title
+{
+  padding: 12px 12px;
+}
+ 
+
+}

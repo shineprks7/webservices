@@ -1,0 +1,436 @@
+.scroll-reveal-opac
+{
+  opacity: 0;
+
+  transition: opacity cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s ;
+}
+.inset-box-shadow-light
+{
+    position: relative;
+}
+
+.outset-box-shadow
+{
+  position: relative;
+  
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s ;
+
+  z-index: 1;
+}
+
+.outset-box-shadow::after
+{
+    
+   content: '';
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+    
+    box-shadow: inset 1000px 0px 50px 0px rgba(12, 8, 64, 1);
+    z-index: 10;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1) 2s ;
+
+}
+
+
+.outset-box-shadow
+{
+  opacity: 1;
+}
+.outset-box-shadow.reveal::after
+{
+
+
+    box-shadow: inset 0px 0px 0px 0px rgba(12, 8, 64, 0.75);
+
+}
+
+.hero-title
+{
+    opacity: 0.1;
+      transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s ;
+
+}
+.hero-title.reveal
+{
+    opacity: 1;
+}
+.hero-sub-title
+{
+    opacity: 0.1;
+      transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s ;
+
+      transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s ;
+  transition-delay: 0.5s;
+
+}
+.hero-button
+{
+    opacity: 0;
+      transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s ;
+
+      transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s ;
+  transition-delay: 1s;
+
+}
+
+.hero-sub-title.reveal
+{
+    opacity: 1;
+}
+.hero-title.reveal
+{
+    opacity: 1;
+}
+.hero-button.reveal
+{
+    opacity: 1;
+
+}
+.hero-title.inset-box-shadow-light::after
+{
+    content: "";
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    
+    box-shadow: inset 400px 0px 50px 0px rgba(255, 255, 255, 1);
+    z-index: 1;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s ;
+
+}
+
+.hero-title.inset-box-shadow-light.reveal::after
+{
+
+
+    box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+
+}
+
+.hero-sub-title.inset-box-shadow-light::after
+{
+    content: "";
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    
+    box-shadow: inset 400px 0px 50px 0px rgba(255, 255, 255, 1);
+    z-index: 1;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s ;
+  transition-delay: 0.5s;
+
+}
+
+.hero-sub-title.inset-box-shadow-light.reveal::after
+{
+
+    box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+
+}
+
+.hero-image
+{
+    max-width: 100%;
+    height: auto;
+
+    background-color: transparent;
+/* background-image: linear-gradient(to right, #4f22b8 1px, transparent 1px),
+     linear-gradient(to bottom, #4f22b8 1px, transparent 1px);
+
+     background-size: 20px 5px;
+
+     */ 
+
+    border-top-left-radius: 50%; 
+       border-top-right-radius: 50%; 
+
+       transform: translate(120%, 0%);
+
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1) 2s ;
+
+        
+        transition-delay: 0.5s;
+
+}
+
+
+.hero-image.reveal
+{
+
+      background-color: #b6da16;
+
+     background-size: 120px 40px;
+
+       transform: translate(0, 0%);
+
+}
+
+.hero-image:hover
+{
+       background-size: 80px 20px;
+
+}
+.final-cta-button 
+{
+
+  background-color: none;
+
+  position: relative;
+  z-index: 1;
+
+}
+
+.final-cta-button::after
+{
+    content: '';
+    z-index: -2;
+    background-color: #000;
+
+    top:0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+         pointer-events: none;
+
+    transition: transform cubic-bezier(0.175, 0.885, 0.32, 1) 1s ;
+    transform: translate(0%, 0%);
+    transition-delay: 0s;
+
+  
+}
+
+.final-cta-button::before
+{
+    content: '';
+    z-index: -1;
+    background-color:blue;
+
+    top:0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-101%, 0);
+
+
+    transition: transform cubic-bezier(0.175, 0.885, 0.32, 1) 1s ;
+
+    pointer-events: none;
+        
+    transition-delay: 0s;
+
+    
+}
+
+.final-cta-button:hover::before
+
+{
+
+    transform: translate(0%, 0%);
+
+
+
+}
+
+.final-cta-button:hover::after
+
+{
+
+    transform: translate(-101%, 0%);
+
+
+
+}
+
+
+.hero-button
+{
+  background-color: none;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-button::after
+{
+    content: '';
+    z-index: -2;
+    background-color: #000;
+
+    top:0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+         pointer-events: none;
+
+    transition: transform cubic-bezier(0.175, 0.885, 0.32, 1) 1s ;
+    transform: translate(0%, 0%);
+    transition-delay: 0s;
+
+  
+}
+
+.hero-button::before
+{
+    content: '';
+    z-index: -1;
+    background-color:blue;
+
+    top:0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-101%, 0);
+
+
+    transition: transform cubic-bezier(0.175, 0.885, 0.32, 1) 1s ;
+
+    pointer-events: none;
+        
+    transition-delay: 0s;
+
+    
+}
+
+.hero-button:hover::before
+
+{
+
+    transform: translate(0%, 0%);
+
+
+
+}
+
+.hero-button:hover::after
+
+{
+
+    transform: translate(-101%, 0%);
+
+
+
+}
+
+.cta-button-account_tax
+
+{
+
+
+  background-color: none;
+
+  position: relative;
+  z-index: 1;
+
+      transition: box-shadow cubic-bezier(0.175, 0.885, 0.32, 1) 1s ;
+    transition-delay: 0s;
+
+        box-shadow: 0px 0px 0px 0px #1c139d;
+
+
+
+}
+
+
+
+.cta-button-account_tax::after
+{
+    content: '';
+    z-index: -2;
+    background-color: #000;
+
+    top:0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+         pointer-events: none;
+
+    transition: transform cubic-bezier(0.175, 0.885, 0.32, 1) 1s ;
+    transform: translate(0%, 0%);
+    transition-delay: 0s;
+
+  
+}
+
+
+.cta-button-account_tax::before
+{
+    content: '';
+    z-index: -1;
+    background-color:blue;
+
+    top:0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-101%, 0);
+
+
+    transition: transform cubic-bezier(0.175, 0.885, 0.32, 1) 1s ;
+
+    pointer-events: none;
+        
+    transition-delay: 0s;
+
+    
+}
+.cta-button-account_tax:hover
+
+{
+    box-shadow: 0px 0px 0px 0px #1c139d;
+
+}
+
+
+.cta-button-account_tax:hover::before
+
+{
+
+    transform: translate(0%, 0%);
+
+
+
+}
+
+.cta-button-account_tax:hover::after
+
+{
+
+    transform: translate(-101%, 0%);
+
+
+
+}
+
+
+.cta-button-account_tax.trigger-box-shadow-reveal
+
+{
+
+    box-shadow: 8px 8px 0px 0px #1c139d;
+
+}
+
+.cta-button-account_tax.trigger-box-shadow-reveal:hover
+
+{
+
+    box-shadow: 0px 0px 0px 0px #1c139d;
+
+}
