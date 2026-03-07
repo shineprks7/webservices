@@ -102,6 +102,7 @@ width: 1200px;
 .section-about-us-card-1
 {
  background-color: #A4A2AC;
+ background-color: #d2d0d7;
 }
 
 .section-about-us-card-1::after
@@ -204,6 +205,21 @@ width: 620px;
  grid-column: span 1;
 }
 
+.section-about-us-card
+{
+  
+  padding: 12px;
+  padding-left: 120px;
+
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+  border-radius: 48px;
+
+  position: relative;
+
+}
+
      .section-about-us-grid-wrapper
   {
 
@@ -256,8 +272,8 @@ width: 100%;
 {
   content: '';
   position: absolute;
-   top:64px;
-   left: 25%;
+   top:-64px;
+   left: 75%;
    width:240px;
    height:240px;
    background-color: #172663;
