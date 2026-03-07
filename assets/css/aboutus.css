@@ -272,7 +272,7 @@ width: 100%;
 {
   content: '';
   position: absolute;
-   top:-64px;
+   top:-48px;
    left: 75%;
    width:240px;
    height:240px;
