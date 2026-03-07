@@ -303,14 +303,14 @@
 }
 .nav-bar-wrapper
 {
-    width: calc(100% - 48px );
+    width: calc(100% - 0px );
     height: 120px;
 
 
  position: absolute;
-    top:24px;
-    left:24px;
-    right: 24px;
+    top:0px;
+    left:0px;
+    right: 0px;
     z-index: 2000;
 }
        .destop-menu-wrapper

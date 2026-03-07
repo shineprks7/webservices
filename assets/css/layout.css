@@ -1320,6 +1320,13 @@ background-color: #2217bf;
     .hero-section {
         margin-top: 96px;
     }
+
+    body
+{
+    padding: 0px;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width:720px)  { 
