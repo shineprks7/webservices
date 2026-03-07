@@ -199,6 +199,11 @@ width: 620px;
 @media (max-width:720px)  { 
 
 
+  .section-about-us-grid-column-pre
+{
+ grid-column: span 1;
+}
+
      .section-about-us-grid-wrapper
   {
 
@@ -252,7 +257,7 @@ width: 100%;
   content: '';
   position: absolute;
    top:64px;
-   left: 30%;
+   left: 25%;
    width:240px;
    height:240px;
    background-color: #172663;
