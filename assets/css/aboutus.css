@@ -258,10 +258,10 @@ width: 100%;
 {
   content: '';
   position: absolute;
-   top:75%;
-   left: 25%;
-   width:320px;
-   height:320px;
+   top:60%;
+   left: 30%;
+   width:400px;
+   height:400px;
    background-color: #172663;
    border-radius: 50%;
   z-index: -1;
@@ -280,6 +280,8 @@ width: 100%;
    border-radius: 50%;
   z-index: -1;
   transform: translate(-50%,0%);
+
+  display: none;
 }
 
 
