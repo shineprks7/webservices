@@ -26,18 +26,6 @@
 
 }
 
-.taxform-heading-sub-label
-{
-
-  font-size: 24px;
-    line-height: 32px;
-    font-style: italic;
-
-    font-weight: 400;
-    margin-top: 24px;
-
-
-}
 
 
 .taxform-input-field-container
@@ -98,9 +86,7 @@ font-size: 24px;
   width: 100%;
 
   display: block;
-  height: auto;
-
-  margin-bottom: 12px;
+  height: 40px;
 
   max-width: 420px;
 
@@ -273,7 +259,7 @@ taxform-text-field-wrapper .text-field::hover
     width: 100%;
     display: grid;
 
-    grid-template-columns: repeat(12,minmax(10px, 1fr));
+    grid-template-columns: repeat(10,minmax(10px, 1fr));
    
     gap:0px;
 
@@ -377,33 +363,20 @@ taxform-text-field-wrapper .text-field::hover
 {
   border-top-color: #081891 ;
 }
+
 .taxform-grid-progress-part-4
-{
-       grid-column: span 2;
-    background-color: #040f6f;
-
-}
-
-.taxform-grid-progress-part-4::after
-{
-  border-top-color: #040f6f ;
-}
-
-.taxform-grid-progress-part-5
 {
        grid-column: span 2;
     background-color: #030a46;
 
 }
 
-.taxform-grid-progress-part-5::after
+.taxform-grid-progress-part-4::after
 {
   border-top-color: #030a46 ;
 }
 
-
-
-.taxform-grid-progress-part-6
+.taxform-grid-progress-part-5
 {
        grid-column: span 2;
         grid-column: span 2;
@@ -413,21 +386,11 @@ taxform-text-field-wrapper .text-field::hover
 
 }
 
-.taxform-grid-progress-part-6::after
+.taxform-grid-progress-part-5::after
 {
   border-top-color: #06af3e ;
 }
 
-.anxiety-progress-wrapper
-{
-  
-}
-.anxiety-quiz-progress-part
-
-{
-         grid-column: span 6 !important;
-
-}
 
 .taxform-result-grid-wrapper
 {
