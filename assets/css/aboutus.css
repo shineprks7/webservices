@@ -94,6 +94,43 @@ width: 1200px;
 
 }
 
+.section-about-us-card-grid
+{
+  grid-template-columns: repeat(12, minmax(10px, 1fr));
+  gap:0px;
+  display: grid;
+  padding-left: 0px !important;
+
+  padding: 0px !important;
+  background-color: #fff !important;
+}
+
+.section-about-us-card-column-1
+{
+  grid-column: span 2;
+  position: relative;
+
+
+
+
+
+}
+
+
+
+.section-about-us-card-column-2
+{
+    grid-column: span 10;
+      color:#172663;
+   padding: 24px;
+
+   background-color: #fff;
+
+
+}
+
+
+
 @keyframes aboutcircleanimation {
 
     0%
@@ -155,7 +192,7 @@ width: 1200px;
   position: absolute;
 
   content: '';
-  top:24px;
+  top:48px;
   left: 24px;
   width: 32px;
   height: 32px;
@@ -175,7 +212,9 @@ width: 1200px;
 
 .section-about-us-card-1::after
 {
- background-color: #fff;
+ background-color: #172663;
+
+ 
 }
 
 .section-about-us-card-2
