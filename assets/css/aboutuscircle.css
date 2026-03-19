@@ -10,6 +10,8 @@
 
     margin-left: auto;
     margin-right: auto;
+
+    margin-bottom: 240px;
 }
 
 .section-about-us-title
@@ -23,9 +25,9 @@
   margin-left: auto;
   margin-right: auto;
 
-  margin-top: 120px;
+  margin-top: 24px;
 
-  box-shadow: 0px 8px 0px 0px #172663;
+  /* box-shadow: 0px 8px 0px 0px #172663; */
 
   padding-bottom: 48px;
   margin-bottom: 120px;
@@ -34,12 +36,12 @@
 .section-about-us-information p
 
 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
-  font-weight: 600;
-  color:#000 !important;
+  font-weight: 400;
+  color:#181818 !important;
 
-  ;
+  letter-spacing: normal;
 
 
   font-family: 'Inter';
@@ -332,7 +334,7 @@ position: absolute;
 
 .section-about-us-information
 {
-  margin-top: 240px;
+  margin-top: 24px;
 
   width: 100%;
   padding: 8px;
