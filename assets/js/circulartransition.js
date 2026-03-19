@@ -582,6 +582,20 @@ function autoSetCardPositionsMobile()
      
 }
 
+if(screenSize > 719)
+   {
+    autoSetCardPositions();
+
+   }
+   else
+   {
+         autoSetCardPositionsMobile();
+
+
+   }
+
+   
+
 setInterval(function(){
 
    if(screenSize > 719)
