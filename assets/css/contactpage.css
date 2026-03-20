@@ -3,7 +3,7 @@
 .contact-page-hero-section
 {
 
-    min-height: 600px;
+    min-height: 400px;
 
     margin-top: 120px;
 
@@ -201,12 +201,11 @@
 .contact-page-information-section-wrapper
 {
 
-  background-color: #2695A3;
 
   padding: 48px;
 
    border-radius: 48px;
-  background: #2695a3;
+  background: #fff;
   box-shadow: -4px -4px 16px rgba(0,0,0,0.25);
 
 }
