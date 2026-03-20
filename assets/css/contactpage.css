@@ -370,6 +370,29 @@
 
 }
 
+.contact-page-information-section-header
+{
+    width: 320px;
+}
+
+.contact-page-information-header-icon
+{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.contact-page-information-header-title
+{
+
+    font-size: 20px;
+
+    color:#000;
+    line-height: 24px;
+
+}
+
 .contact-page-information-image-container
 {
    width:  320px;
@@ -383,6 +406,13 @@
 
 @media (max-width:720px)  { 
 
-
+.contact-page-information-image-container
+{
+   width:  284px;
+   height: 284px;
+   background-color: #fff;
+   border-radius: 50%;
+   padding: 12px;
+}
 
 }
