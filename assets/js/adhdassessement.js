@@ -1800,18 +1800,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./quizitem.vue */ "./resources/js/screening/screeningcomponents/adhdassessement/quizitem.vue");
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3062,7 +3054,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       }
     }
   },
-  computed: {
+  computed: _defineProperty({
     quiz1Score: function quiz1Score() {
       var result = {
         status: false,
@@ -3391,8 +3383,8 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 
       //  let lengthofquiz = this.quizDataStage1.length + this.quizDataStage2.length + this.quizDataStage3.length + this.quizDataStage4.length + this.quizDataStage5.length ; 
 
-      var excellentscore = 49;
-      var goodscore = 39;
+      var excellentscore = 57;
+      var goodscore = 40;
       var averagescore = 30;
       var belowaveragescore = 20;
       if (this.totalQuizScore > excellentscore) {
@@ -3417,7 +3409,38 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       };
       return result;
     }
-  }
+  }, "overallVerdict", function overallVerdict() {
+    var verdictmessage = '';
+    var rating = 0;
+
+    //  let lengthofquiz = this.quizDataStage1.length + this.quizDataStage2.length + this.quizDataStage3.length + this.quizDataStage4.length + this.quizDataStage5.length ; 
+
+    var excellentscore = 57;
+    var goodscore = 40;
+    var averagescore = 27;
+    var belowaveragescore = 14;
+    if (this.totalQuizScore > excellentscore) {
+      verdictmessage = 'Excellent';
+      rating = 5;
+    } else if (this.totalQuizScore > goodscore) {
+      verdictmessage = 'Good';
+      rating = 4;
+    } else if (this.totalQuizScore > averagescore) {
+      verdictmessage = 'Average';
+      rating = 3;
+    } else if (this.totalQuizScore > belowaveragescore) {
+      verdictmessage = 'Below Average';
+      rating = 2;
+    } else {
+      verdictmessage = 'Critial';
+      rating = 1;
+    }
+    var result = {
+      'verdictrating': verdictmessage,
+      'rating': rating
+    };
+    return result;
+  })
 });
 
 /***/ }),
@@ -21848,53 +21871,9 @@ var render = function () {
                 _vm._v(_vm._s(this.totalQuizScore) + " "),
               ]),
               _vm._v(" "),
-              _c("h3", { staticClass: "mtop-24" }, [
-                _vm._v(
-                  "\n\n                               Your Total Score Part A - " +
-                    _vm._s(
-                      this.partAScore.totalscore
-                        ? this.partAScore.totalscore
-                        : ""
-                    ) +
-                    "\n                    "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("h3", { staticClass: "mtop-24" }, [
-                _vm._v(
-                  "\n\n                               Your Total Score Part A - " +
-                    _vm._s(
-                      this.partBScore.totalscore
-                        ? this.partBScore.totalscore
-                        : ""
-                    ) +
-                    "\n                    "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("h3", { staticClass: "mtop-24" }, [
-                _vm._v(
-                  "\n\n                               Your Symtom Score Part A - " +
-                    _vm._s(
-                      this.partAScore.symptomScore
-                        ? this.partAScore.symptomScore
-                        : ""
-                    ) +
-                    "\n                          "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("h3", { staticClass: "mtop-24" }, [
-                _vm._v(
-                  "\n\n                               Your Symtom Score Part B - " +
-                    _vm._s(
-                      this.partBScore.symptomScore
-                        ? this.partBScore.symptomScore
-                        : ""
-                    ) +
-                    "\n                          "
-                ),
-              ]),
+               false
+                ? 0
+                : _vm._e(),
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "quiz-verdict-wrapper mtop-48" }, [
@@ -21912,105 +21891,25 @@ var render = function () {
                   staticClass: "quiz-verdict-excellent",
                 },
                 [
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating == 5,
-                          expression: "overallVerdict.rating == 5",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                             You Show Very High Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating == 4,
-                          expression: "overallVerdict.rating == 4",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                             You Show High Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating == 3,
-                          expression: "overallVerdict.rating == 3 ",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                             You Show Moderate Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating == 2,
-                          expression: "overallVerdict.rating == 2 ",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                              You show  Some Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating < 2,
-                          expression: "overallVerdict.rating < 2 ",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                              You show  Some Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
+                  _vm.partBScore.symptomScore > 6
+                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                        _vm._v(
+                          "\n\n                             You Show many Symptoms that is consistent with ADHD\n\n                          "
+                        ),
+                      ])
+                    : _vm.partBScore.symptomScore > 3
+                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                        _vm._v(
+                          "\n\n                             You Show many Symptoms that is consistent with ADHD\n\n                          "
+                        ),
+                      ])
+                    : _vm.partBScore.symptomScore <= 3
+                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                        _vm._v(
+                          "\n\n                              You show  Some  Symptoms that is consistent with ADHD\n\n                          "
+                        ),
+                      ])
+                    : _vm._e(),
                 ]
               ),
               _vm._v(" "),
@@ -22028,105 +21927,31 @@ var render = function () {
                   staticClass: "quiz-verdict-positive",
                 },
                 [
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating == 5,
-                          expression: "overallVerdict.rating == 5",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                             You Show Very High Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating == 4,
-                          expression: "overallVerdict.rating == 4",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                             You Show High Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating == 3,
-                          expression: "overallVerdict.rating == 3 ",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                             You Show Mild to  Moderate Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating == 2,
-                          expression: "overallVerdict.rating == 2 ",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                              You show  Low Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h3",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.overallVerdict.rating < 2,
-                          expression: "overallVerdict.rating < 2 ",
-                        },
-                      ],
-                      staticClass: "quiz-verdict-positive",
-                    },
-                    [
-                      _vm._v(
-                        "\n\n                              You show  No Symptoms of ADHD\n\n                          "
-                      ),
-                    ]
-                  ),
+                  _vm.partBScore.symptomScore > 10
+                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                        _vm._v(
+                          "\n\n                             You Show some Symptoms that is consistent with ADHD\n\n                          "
+                        ),
+                      ])
+                    : _vm.partBScore.symptomScore > 6
+                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                        _vm._v(
+                          "\n\n                             You Show few Symptoms that is consistent with ADHD\n\n                          "
+                        ),
+                      ])
+                    : _vm.partBScore.symptomScore > 3
+                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                        _vm._v(
+                          "\n\n                             You Show very Less Symptoms that is consistent with ADHD\n\n                          "
+                        ),
+                      ])
+                    : _vm.partBScore.symptomScore <= 3
+                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                        _vm._v(
+                          "\n\n                              You show No Symptoms of ADHD\n\n                          "
+                        ),
+                      ])
+                    : _vm._e(),
                 ]
               ),
             ]),
