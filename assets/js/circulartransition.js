@@ -61,6 +61,27 @@ The Formula
 
         screenSize = window.innerWidth;
 
+        if(screenSize > 719)
+{
+
+setCardPositions(card_circle_1, 245);
+
+setCardPositions(card_circle_2, 30);
+
+setCardPositions(card_circle_3, 90);
+
+}
+else
+{
+  setCardPositionsMobile(card_circle_1, 225);
+
+setCardPositionsMobile(card_circle_2, 5);
+
+setCardPositionsMobile(card_circle_3, 90);
+
+
+}
+
 
      });
 
