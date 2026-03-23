@@ -64,20 +64,20 @@ The Formula
         if(screenSize > 719)
 {
 
-setCardPositions(card_circle_1, 245);
+setCardPositions(card_circle_1, 245 ,120);
 
-setCardPositions(card_circle_2, 30);
+setCardPositions(card_circle_2, 30 ,120);
 
-setCardPositions(card_circle_3, 90);
+setCardPositions(card_circle_3, 90 ,120);
 
 }
 else
 {
-  setCardPositionsMobile(card_circle_1, 225);
+  setCardPositionsMobile(card_circle_1, 225 , 28);
 
-setCardPositionsMobile(card_circle_2, 5);
+setCardPositionsMobile(card_circle_2, 5 , 60);
 
-setCardPositionsMobile(card_circle_3, 90);
+setCardPositionsMobile(card_circle_3, 90, 60);
 
 
 }
@@ -87,7 +87,7 @@ setCardPositionsMobile(card_circle_3, 90);
 
 
 
-function setCardPositions(el, rdegree)
+function setCardPositions(el, rdegree, adjustment)
 {
 
 
@@ -115,10 +115,10 @@ function setCardPositions(el, rdegree)
      let cy = height / 2;
 
 
-     let x = (cx + Radius * Math.cos(radian)) - 120 ;
+     let x = (cx + Radius * Math.cos(radian)) - adjustment ;
 
 
-     let y = (cy + Radius * Math.sin(radian))  - 120;
+     let y = (cy + Radius * Math.sin(radian))  - adjustment;
 
 
      let scale = 1;
@@ -138,7 +138,7 @@ function setCardPositions(el, rdegree)
 
 
 }
-function setCardPositionsMobile(el, rdegree)
+function setCardPositionsMobile(el, rdegree, adjustment)
 {
 
 
@@ -166,10 +166,12 @@ function setCardPositionsMobile(el, rdegree)
      let cy = height / 2;
 
 
-     let x = (cx + Radius * Math.cos(radian)) - 120 ;
 
 
-     let y = (cy + Radius * Math.sin(radian))  - 120;
+     let x = (cx + Radius * Math.cos(radian)) - adjustment ;
+
+
+     let y = (cy + Radius * Math.sin(radian))  - adjustment;
 
 
      let scale = 1;
@@ -193,20 +195,20 @@ function setCardPositionsMobile(el, rdegree)
 if(screenSize > 719)
 {
 
-setCardPositions(card_circle_1, 245);
+setCardPositions(card_circle_1, 245, 120);
 
-setCardPositions(card_circle_2, 30);
+setCardPositions(card_circle_2, 30, 120);
 
-setCardPositions(card_circle_3, 90);
+setCardPositions(card_circle_3, 90, 120);
 
 }
 else
 {
-  setCardPositionsMobile(card_circle_1, 225);
+  setCardPositionsMobile(card_circle_1, 225,28);
 
-setCardPositionsMobile(card_circle_2, 5);
+setCardPositionsMobile(card_circle_2, 5,60);
 
-setCardPositionsMobile(card_circle_3, 90);
+setCardPositionsMobile(card_circle_3, 90,60);
 
 
 }
