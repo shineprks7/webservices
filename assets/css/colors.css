@@ -1,8 +1,11 @@
+
+
+
 .primary-bg
 {
 
-    background-color:#0C0840;
-    background-color:#0b0840;
+    background-color:#B7601E;
+    background-color:#fa0905;
 
 
 }
@@ -18,11 +21,29 @@
 
 .secondary-bg
 {
-    background-color: #311291;
+    background-color: #05fa52;
 }
 .secondary-font
 {
-    color: #311291;
+    color: #05fa52;
+}
+
+.bgcolor-3
+{
+    background-color: #fa05ec;
+}
+
+.bgcolor-4
+{
+    background-color: #05fadd;
+}
+.bgcolor-4
+{
+    background-color: #e705fa;
+}
+.secondary-font
+{
+    color: #05fa52;
 }
 
 .dark-primary-bg

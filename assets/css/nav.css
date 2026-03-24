@@ -5,6 +5,15 @@
     overflow: hidden;
     background: #5834C4;
     background-color: #B7601E;
+    background-color: #B7601E;
+        background-color: #fa0905;
+
+        background-color: #B7601E;
+
+        background-color: #05fadd;
+
+        background-color: #fff;
+
     position: absolute;
 
     padding-left: 24px;
@@ -25,6 +34,9 @@
    
 
     color:#fff;
+
+    color:#fa0905;
+
 
     border-bottom: 1px solid #fff;
     box-sizing: border-box;
@@ -117,6 +129,9 @@
 
   color:#fff;
 
+  color:#0C0840;
+
+
   
 }
 .desktop-menu li a
@@ -169,6 +184,11 @@
   white-space: normal;
   color: #fff;
   background-color: #B7601E !important;
+
+  background-color: #05fadd !important;
+
+  color:#0C0840;
+  
 
 
   
@@ -358,6 +378,7 @@
   {
 
      background-color: rgba(255,255,255,1);
+     background-color: #0C0840;
 
      height: 2px;
      width: 36px;

@@ -16,11 +16,17 @@
     margin-right: auto;
 
     margin-bottom: 240px;
+
+    background-color: #fff;
+
+    border-radius: 50%;
 }
 
 .section-about-us-title
 {
   text-align: center;
+  color:#fa0905;
+  
 }
 
 .section-about-us-information
@@ -63,6 +69,7 @@
     width: 720px;
     height: 720px;
     background-color: #172663;
+    background-color: #fa05ec;
     border-radius: 50%;
     z-index: -1;
     transform: translate(-50%, 0);
@@ -114,6 +121,7 @@
 
   position: relative;
 
+
   transition: opacity 1s linear;
 
 
@@ -135,6 +143,8 @@
 [data-card-index='2'] .section-about-us-card-column-2
 {
   opacity: 1;
+    color: red;
+font-weight: bold;
 
   font-style: italic;
 
@@ -160,7 +170,7 @@
 
    overflow: hidden;
 
-   box-shadow:  24px -24px 0 0  #E9F23F,  -24px 24px 0 0  #E9F23F ;
+   box-shadow:  24px -24px 0 0  #05fa52,  -24px 24px 0 0  #05fa52 ;
 
 }
 
@@ -203,31 +213,36 @@ position: absolute;
 
   padding: 0px !important;
   background-color: rgba(255,255,255,0.2) !important;
+  background-color: rgba(255,255,255,0.7) !important;
 
   color:#000;
   width: 50%;
 
-  box-shadow: -8px -8px 0 0 red;
+  box-shadow: -8px -8px 0 0 #fa0905;
 
-  transition: box-shadow 1s linear;
+  transition: box-shadow background-color 1s linear;
 
   overflow: hidden;
 }
 
 [data-card-index='0'].section-about-us-card-circle
 {
-  box-shadow: 0px 8px 0 0 red;
+  box-shadow: 0px 8px 0 0 #fa0905;
+    background-color: rgba(255,255,255,0.2) !important;
 
 }
 
 [data-card-index='1'].section-about-us-card-circle
 {
-  box-shadow: 8px 8px 0 0 red;
+  box-shadow: 8px 8px 0 0 #fa0905;
+
+    background-color: rgba(255,255,255,0.2) !important;
+
 
 }
 [data-card-index='2'].section-about-us-card-circle
 {
-  box-shadow: -8px -8px 0 0 red;
+  box-shadow: -8px -8px 0 0 #fa0905;
 
 }
 
@@ -241,7 +256,7 @@ position: absolute;
   width: 12px;
   height: 12px;
   background-color: #172663;
-  background-color: red;
+  background-color: #fa0905;
 
   border-radius: 50%;
   z-index: 10;
@@ -262,7 +277,6 @@ position: absolute;
     /* 2. The "Frosted" look */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Safari support */
-    
    
 }
 
@@ -300,6 +314,7 @@ position: absolute;
     width: 480px;
     height: 480px;
     background-color: #172663;
+    background-color: #fa05ec;
     border-radius: 50%;
     z-index: -1;
     transform: translate(-50%, 0);
@@ -350,7 +365,7 @@ position: absolute;
 
    overflow: hidden;
 
-   box-shadow:  8px -8px 0 0  #E9F23F,  -8px 8px 0 0  #E9F23F ;
+   box-shadow:  8px -8px 0 0  #05fa52,  -8px 8px 0 0  #05fa52 ;
 
 }
 
@@ -391,6 +406,7 @@ position: absolute;
   width: 120px;
   height: 10px;
   background-color: #172663;
+  background-color: #fa05ec;
   top:50%;
   right: 8px;
   transform: translate(0,-50%);

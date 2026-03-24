@@ -1,6 +1,9 @@
 .web-services-section
 {
-    background-color: #020205;
+    background-color: #000;
+
+    background-color: #fff;
+
     padding-top: 48px;
     padding-bottom: 48px;
 }
@@ -8,6 +11,8 @@
 .web-services-section-title
 {
  color:#fff;
+
+ color:#000;
 
 }
 
@@ -44,13 +49,14 @@
 .web-services-section-grid-card-1
 {
  background-color: #EB1B1B;
+ background-color: #fa0905;
      color:#fff;
 
 }
 
 .web-services-section-grid-card-2
 {
- background-color: #988EBF;
+ background-color: #05fadd;
 
      color:#211727;
 
@@ -58,7 +64,7 @@
 
 .web-services-section-grid-card-3
 {
- background-color: #EB1B1B;
+ background-color: #fa05ec;
      color:#fff;
 
 }
@@ -66,7 +72,7 @@
 
 .web-services-section-grid-card-4
 {
- background-color: #BDDC4E;
+ background-color: #05fa52;
 }
 
 
@@ -80,7 +86,9 @@
 
   min-height: 64px;
   z-index: 2;
-  background-color: #020205;
+  background-color: #000;
+      background-color: #fff;
+
   padding: 24px;
 
   max-height: 80px;
@@ -95,7 +103,9 @@
 {
  grid-column: span 6;
   position: relative;
-  background-color: #020205;
+  background-color: #000;
+      background-color: #fff;
+
   border-bottom-left-radius: 24px;
   height: 100%;
 
@@ -106,7 +116,8 @@
   position: relative;
   padding: 24px;
     min-height: 240px;
-  background-color: #020205;
+  background-color: #000;
+    background-color: #fff;
 
     z-index: 2;
 
@@ -126,7 +137,7 @@
     width: 100%;
     height: 100%;
     z-index: -1 !important;
-    background-color: #EB1B1B;
+    background-color: #fa0905;
     border-top-right-radius: 24px;
       border-top-left-radius: 24px;
 }
@@ -140,7 +151,7 @@
     width: 100%;
     height: 100%;
     z-index: -1 !important;
-    background-color: #EB1B1B;
+    background-color: #fa05ec;
      border-top-right-radius: 24px;
       border-bottom-left-radius: 24px;
           border-bottom-right-radius: 24px;
@@ -151,14 +162,14 @@
 .web-services-section-grid-card-1 .web-services-grid-column-1::before
 {
     
-    background-color: #EB1B1B;
+    background-color: #fa0905;
    
 }
 
 .web-services-section-grid-card-1 .web-services-grid-column-3::before
 {
     
-    background-color: #EB1B1B;
+    background-color: #fa0905;
      
 
 }
@@ -166,14 +177,14 @@
 .web-services-section-grid-card-2 .web-services-grid-column-1::before
 {
     
-    background-color: #988EBF;
+    background-color: #05fadd;
    
 }
 
 .web-services-section-grid-card-2 .web-services-grid-column-3::before
 {
     
-    background-color: #988EBF;
+    background-color: #05fadd;
      
 
 }
@@ -181,14 +192,14 @@
 .web-services-section-grid-card-3 .web-services-grid-column-1::before
 {
     
-    background-color: #EB1B1B;
+    background-color: #fa05ec;
    
 }
 
 .web-services-section-grid-card-3 .web-services-grid-column-3::before
 {
     
-    background-color: #EB1B1B;
+    background-color: #fa05ec;
      
 
 }
@@ -196,14 +207,14 @@
 .web-services-section-grid-card-4 .web-services-grid-column-1::before
 {
     
-    background-color: #BDDC4E;
+    background-color: #05fa52;
    
 }
 
 .web-services-section-grid-card-4 .web-services-grid-column-3::before
 {
     
-    background-color: #BDDC4E;
+    background-color: #05fa52;
      
 
 }
@@ -257,6 +268,7 @@
     width: 32px;
     height: 32px;
     background-color: #8FFD35;
+    background-color: #05fa52;
     border-radius: 50%;
 }
 
@@ -293,7 +305,9 @@
 
   min-height: 64px;
   z-index: 2;
-  background-color: #020205;
+  background-color: #000;
+      background-color: #fff;
+
   padding: 24px;
 
   max-height: 80px;
@@ -308,7 +322,9 @@
 {
  grid-column: span 4;
   position: relative;
-  background-color: #020205;
+  background-color: #000;
+      background-color: #fff;
+
   border-bottom-left-radius: 24px;
   height: 100%;
 
@@ -350,7 +366,9 @@
 
   min-height: 64px;
   z-index: 2;
-  background-color: #020205;
+  background-color: #000;
+      background-color: #fff;
+
   padding: 24px;
 
   max-height: 80px;
@@ -365,7 +383,9 @@
 {
  grid-column: span 4;
   position: relative;
-  background-color: #020205;
+  background-color: #000;
+      background-color: #fff;
+
   border-bottom-left-radius: 24px;
   height: 100%;
 
