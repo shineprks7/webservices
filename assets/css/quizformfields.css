@@ -711,7 +711,11 @@ taxform-text-field-wrapper .text-field::hover
   text-align: center;
 
 }
-
+.quiz-verdict-wrapper h3
+{
+  font-weight: 400;
+  font-style: italic;
+}
 .quiz-imporovement-wrapper
 {
 

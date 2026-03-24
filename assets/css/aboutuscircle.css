@@ -26,6 +26,13 @@
 {
   text-align: center;
   color:#fa0905;
+
+  color:#05fadd;
+
+
+
+ font-size: 32px;
+ line-height: 49px;
   
 }
 
@@ -52,6 +59,9 @@
   color:#181818 !important;
 
   color:#5b5656 !important;
+
+  color:#a5a4a4 !important;
+
   
 
   letter-spacing: normal;
@@ -395,7 +405,12 @@ position: absolute;
 
   position: relative;
 
-  color:red;
+  color:#05fadd;
+
+
+
+ font-size: 32px;
+ line-height: 49px;
 
 }
 
@@ -403,10 +418,12 @@ position: absolute;
 {
   content: '';
 
-  width: 120px;
-  height: 10px;
+  
+ width: 120px;
+ height: 120px;
+
   background-color: #172663;
-  background-color: #fa05ec;
+  background-color: #05fadd;
   top:50%;
   right: 8px;
   transform: translate(0,-50%);

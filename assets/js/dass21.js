@@ -2024,6 +2024,12 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -21379,6 +21385,8 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "quiz-verdict-wrapper mtop-48" }, [
+              _c("h5", { staticClass: "mtop-48" }, [_vm._v(" Anxiety: ")]),
+              _vm._v(" "),
               _c("div", { staticClass: "quiz-verdict-excellent mtop-24" }, [
                 _c(
                   "h3",
@@ -21481,6 +21489,8 @@ var render = function () {
                 ),
               ]),
               _vm._v(" "),
+              _c("h5", { staticClass: "mtop-48" }, [_vm._v(" Stress: ")]),
+              _vm._v(" "),
               _c("div", { staticClass: "quiz-verdict-excellent mtop-24" }, [
                 _c(
                   "h3",
@@ -21582,6 +21592,8 @@ var render = function () {
                   ]
                 ),
               ]),
+              _vm._v(" "),
+              _c("h5", { staticClass: "mtop-48" }, [_vm._v(" Depression: ")]),
               _vm._v(" "),
               _c("div", { staticClass: "quiz-verdict-excellent mtop-24" }, [
                 _c(
