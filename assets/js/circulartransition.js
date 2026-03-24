@@ -53,31 +53,48 @@ The Formula
 
       let screenSize = 1240;
 
+
+      let previousScreenSize = false;
+
+
       screenSize = window.innerWidth;
 
 
      window.addEventListener('resize', function(){
+           
+       previousScreenSize = screenSize;
 
 
         screenSize = window.innerWidth;
 
+        
+
         if(screenSize > 719)
 {
 
+   if(previousScreenSize && previousScreenSize < 720 )
+   {
 setCardPositions(card_circle_1, 245 ,120);
 
 setCardPositions(card_circle_2, 30 ,120);
 
 setCardPositions(card_circle_3, 90 ,120);
 
+   }
+
 }
 else
 {
+   if(previousScreenSize && previousScreenSize > 719 )
+   {
+
   setCardPositionsMobile(card_circle_1, 225 , 28);
 
 setCardPositionsMobile(card_circle_2, 5 , 60);
 
 setCardPositionsMobile(card_circle_3, 90, 60);
+
+   }
 
 
 }

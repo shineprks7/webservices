@@ -123,16 +123,27 @@
 [data-card-index='0'] .section-about-us-card-column-2
 {
   opacity: 0.3;
+  font-style: italic;
 
 }
 [data-card-index='1'] .section-about-us-card-column-2
 {
   opacity: 0.5;
+  font-style: italic;
 
 }
 [data-card-index='2'] .section-about-us-card-column-2
 {
   opacity: 1;
+
+  font-style: italic;
+
+}
+
+[data-card-index='2'] .section-about-us-card-column-2 .aboutus-highlight-text
+{
+  color: blue;
+  font-weight: bold;
 
 }
 
