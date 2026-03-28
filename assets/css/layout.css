@@ -1690,6 +1690,19 @@ font-size: 64px;
     
 }
 
+.footer-section
+{
+    padding: 12px;
+    padding-bottom: 48px;
+    
+
+    min-height: 400px;
+    position: relative;
+    z-index: 2;
+    
+
+}
+
 }
 
 
