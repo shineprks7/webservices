@@ -450,4 +450,32 @@
    padding: 12px;
 }
 
+.contact-page-information-content-wrapper
+{
+  background-color: #2695A3;
+  box-shadow: -8px 0px 0px 0 rgb(255, 254, 254), 4px 4px 4px 0 rgba(0, 0, 0,0.25) ;
+  margin-top: 80px;
+  padding: 24px 12px;
+
+  border-radius: 12px;
+  display: flex;
+  gap:12px;
+  align-items: center;
+  justify-content: flex-start;
+
+
+}
+
+.contact-page-information-section-header
+
+{
+
+        padding: 8px 24px;
+        gap: 12px;
+        /* border-radius: 12px; */
+
+}
+
+
+
 }
