@@ -8,7 +8,25 @@
 {
 
 }
+.footer-menu-item
+{
+    margin-left: 4px;
+
+}
 .footer-menu-item a
 {
     color:#fff;
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.footer-contact-info-list
+{
+     font-size: 16px;
+    line-height: 20px;
+      letter-spacing: 0.02em;
+
 }
