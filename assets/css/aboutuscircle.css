@@ -283,13 +283,55 @@ position: absolute;
   content: '';
   top:48px;
   left: 8px;
-  width: 12px;
-  height: 12px;
+  width: 32px;
+  height: 32px;
+   text-align: center;
+   line-height: 32px;
+   vertical-align: middle;
   background-color: #172663;
   background-color: #fa0905;
+font-weight: bold;
+  color: #fff;
 
   border-radius: 50%;
   z-index: 10;
+}
+
+.section-about-us-circle-card-1::after 
+{
+  content: '3';
+
+}
+.section-about-us-circle-card-2::after
+{
+  content: '2';
+
+}
+.section-about-us-circle-card-3::after
+{
+  content: '1';
+
+}
+
+[data-card-index='0'].section-about-us-card-circle::after
+{
+  opacity: 0.3;
+    background-color: #fff;
+
+
+}
+[data-card-index='1'].section-about-us-card-circle::after
+{
+  opacity: 0.5;
+    background-color: #fff;
+
+
+}
+[data-card-index='2'].section-about-us-card-circle::after
+{
+  opacity: 1;
+    background-color: #fa0905;
+
 }
 
 .section-about-us-card-column-2
