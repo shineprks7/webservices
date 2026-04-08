@@ -789,6 +789,38 @@ taxform-text-field-wrapper .text-field::hover
   font-weight: bold;
 }
 
+.screening_report_download_btn_wrapper
+{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.screening_report_download
+{
+    position: relative;
+    min-width: 240px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-around;
+
+    gap:12px;
+    align-items: center;
+
+   
+    
+    font-size: 20px;
+    line-height: 24px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background-color: #ddd;
+    
+    
+
+}
 
 
 

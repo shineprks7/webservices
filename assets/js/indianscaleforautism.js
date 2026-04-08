@@ -1800,6 +1800,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./quizitem.vue */ "./resources/js/screening/screeningcomponents/indianscaleforautism/quizitem.vue");
+/* harmony import */ var _screeningreport_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screeningreport.vue */ "./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 //
 //
@@ -2027,12 +2028,27 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
   components: {
-    'quizitem': _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    'quizitem': _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    'screeningreport': _screeningreport_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -4091,6 +4107,41 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       };
       return result;
     },
+    allQuizData: function allQuizData() {
+      var finalquiz = {
+        '1': {
+          title: 'Social Relationships and Reciprocity',
+          quizlist: this.quizDataStage1,
+          score: this.quiz1Score
+        },
+        '2': {
+          title: 'Emotional Responsiveness',
+          quizlist: this.quizDataStage2,
+          score: this.quiz2Score
+        },
+        '3': {
+          title: 'Speech, Language and Communication',
+          quizlist: this.quizDataStage3,
+          score: this.quiz3Score
+        },
+        '4': {
+          title: 'Behaviour Patterns',
+          quizlist: this.quizDataStage4,
+          score: this.quiz4Score
+        },
+        '5': {
+          title: 'Sensory Aspects',
+          quizlist: this.quizDataStage5,
+          score: this.quiz5Score
+        },
+        '6': {
+          title: 'Cognitive Component',
+          quizlist: this.quizDataStage6,
+          score: this.quiz6Score
+        }
+      };
+      return finalquiz;
+    },
     disabilityPercentage: function disabilityPercentage() {
       var verdictmessage = '';
       var rating = 0;
@@ -4352,6 +4403,775 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
+  components: {},
+  data: function data() {
+    return {};
+  },
+  mounted: {},
+  methods: {},
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    'quizdata': [Array, Object],
+    'finalscore': [String, Number],
+    'finalverdict': [Object]
+  },
   components: {},
   data: function data() {
     return {};
@@ -21961,6 +22781,45 @@ component.options.__file = "resources/js/screening/screeningcomponents/indiansca
 
 /***/ }),
 
+/***/ "./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _screeningreport_vue_vue_type_template_id_281aa5ce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screeningreport.vue?vue&type=template&id=281aa5ce& */ "./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=template&id=281aa5ce&");
+/* harmony import */ var _screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screeningreport.vue?vue&type=script&lang=js& */ "./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _screeningreport_vue_vue_type_template_id_281aa5ce___WEBPACK_IMPORTED_MODULE_0__.render,
+  _screeningreport_vue_vue_type_template_id_281aa5ce___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/screening/screeningcomponents/indianscaleforautism/main.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************!*\
   !*** ./resources/js/screening/screeningcomponents/indianscaleforautism/main.vue?vue&type=script&lang=js& ***!
@@ -22022,6 +22881,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./radio_unchecked.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/indianscaleforautism/radio_unchecked.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./screeningreport.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -22089,6 +22964,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_template_id_537794ce___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_template_id_537794ce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./radio_unchecked.vue?vue&type=template&id=537794ce& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/indianscaleforautism/radio_unchecked.vue?vue&type=template&id=537794ce&");
+
+
+/***/ }),
+
+/***/ "./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=template&id=281aa5ce&":
+/*!****************************************************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=template&id=281aa5ce& ***!
+  \****************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_281aa5ce___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_281aa5ce___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_281aa5ce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./screeningreport.vue?vue&type=template&id=281aa5ce& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=template&id=281aa5ce&");
 
 
 /***/ }),
@@ -22660,13 +23552,63 @@ var render = function () {
                 ),
               ]),
             ]),
+            _vm._v(" "),
+            _vm.activeStage == 7
+              ? _c("div", [
+                  _c(
+                    "div",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: false,
+                          expression: "false",
+                        },
+                      ],
+                    },
+                    [
+                      _c("screeningreport", {
+                        attrs: {
+                          quizdata: _vm.allQuizData,
+                          finalscore: _vm.totalQuizScore,
+                          finalverdict: _vm.overallVerdict,
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm._m(0),
           ]
         ),
       ]),
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mtop-48 screening_report_download_btn_wrapper" },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "screening_report_download",
+            attrs: { id: "screening_report_download" },
+          },
+          [_vm._v(" Download Report ")]
+        ),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
@@ -22867,6 +23809,1032 @@ var render = function () {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=template&id=281aa5ce&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/indianscaleforautism/screeningreport.vue?vue&type=template&id=281aa5ce& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render),
+/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("main", [
+    _c("section", { staticClass: "screening-report-prefix" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "mtop-48" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "table",
+          {
+            staticClass: "screening-html-table",
+            attrs: { id: "report_result_heading" },
+          },
+          [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr"),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              ISAA Score " +
+                      _vm._s(this.finalscore) +
+                      " \r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Diagnosis Recommondation: " +
+                      _vm._s(this.finalverdict.verdictrating) +
+                      " Autism\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _vm._m(3),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(4),
+        _vm._v(" "),
+        _vm._m(5),
+        _vm._v(" "),
+        _vm._m(6),
+      ]),
+      _vm._v(" "),
+      _vm._m(7),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "screening_table_wrapper ",
+          staticStyle: { "margin-top": "120px" },
+        },
+        [
+          _c(
+            "table",
+            {
+              staticClass: "screening-html-table",
+              attrs: { id: "screening-report-table" },
+            },
+            [
+              _vm._m(8),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                [
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["1"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["1"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.quizid },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                             " +
+                              _vm._s(index + 1) +
+                              "\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c("td", { key: option.id }, [
+                            _vm._v(
+                              "\r\n                                " +
+                                _vm._s(
+                                  quiz.answerChosen.id &&
+                                    quiz.answerChosen.id == option.id
+                                    ? "X"
+                                    : ""
+                                ) +
+                                "\r\n                           "
+                            ),
+                          ])
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["2"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["2"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.id },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                             " +
+                              _vm._s(
+                                index + 1 + _vm.quizdata["1"].quizlist.length
+                              ) +
+                              "\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c("td", { key: option.id }, [
+                            _vm._v(
+                              "\r\n                                " +
+                                _vm._s(
+                                  quiz.answerChosen.id &&
+                                    quiz.answerChosen.id == option.id
+                                    ? "X"
+                                    : ""
+                                ) +
+                                "\r\n                           "
+                            ),
+                          ])
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["3"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["3"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.id },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                         " +
+                              _vm._s(
+                                index +
+                                  1 +
+                                  _vm.quizdata["1"].quizlist.length +
+                                  _vm.quizdata["2"].quizlist.length
+                              ) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c("td", { key: option.id }, [
+                            _vm._v(
+                              "\r\n                                " +
+                                _vm._s(
+                                  quiz.answerChosen.id &&
+                                    quiz.answerChosen.id == option.id
+                                    ? "X"
+                                    : ""
+                                ) +
+                                "\r\n                           "
+                            ),
+                          ])
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["4"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["4"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.id },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                             " +
+                              _vm._s(
+                                index +
+                                  1 +
+                                  _vm.quizdata["1"].quizlist.length +
+                                  _vm.quizdata["2"].quizlist.length +
+                                  _vm.quizdata["3"].quizlist.length
+                              ) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c("td", { key: option.id }, [
+                            _vm._v(
+                              "\r\n                                " +
+                                _vm._s(
+                                  quiz.answerChosen.id &&
+                                    quiz.answerChosen.id == option.id
+                                    ? "X"
+                                    : ""
+                                ) +
+                                "\r\n                           "
+                            ),
+                          ])
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["5"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["5"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.id },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                           " +
+                              _vm._s(
+                                index +
+                                  1 +
+                                  _vm.quizdata["1"].quizlist.length +
+                                  _vm.quizdata["2"].quizlist.length +
+                                  _vm.quizdata["3"].quizlist.length +
+                                  _vm.quizdata["4"].quizlist.length
+                              ) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c("td", { key: option.id }, [
+                            _vm._v(
+                              "\r\n                                " +
+                                _vm._s(
+                                  quiz.answerChosen.id &&
+                                    quiz.answerChosen.id == option.id
+                                    ? "X"
+                                    : ""
+                                ) +
+                                "\r\n                           "
+                            ),
+                          ])
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["6"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["6"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.id },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                            " +
+                              _vm._s(
+                                index +
+                                  1 +
+                                  _vm.quizdata["1"].quizlist.length +
+                                  _vm.quizdata["2"].quizlist.length +
+                                  _vm.quizdata["3"].quizlist.length +
+                                  _vm.quizdata["4"].quizlist.length +
+                                  _vm.quizdata["5"].quizlist.length
+                              ) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c("td", { key: option.id }, [
+                            _vm._v(
+                              "\r\n                                " +
+                                _vm._s(
+                                  quiz.answerChosen.id &&
+                                    quiz.answerChosen.id == option.id
+                                    ? "X"
+                                    : ""
+                                ) +
+                                "\r\n                           "
+                            ),
+                          ])
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                ],
+                2
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "screening_verdict_table ",
+          staticStyle: { "margin-top": "120px" },
+        },
+        [
+          _c(
+            "table",
+            {
+              staticClass: "screening-html-table",
+              attrs: { id: "screening-score-table" },
+            },
+            [
+              _vm._m(9),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                [
+                  _vm._l(_vm.quizdata, function (quizobj, index) {
+                    return _c("tr", { key: index }, [
+                      _c("td", [
+                        _vm._v(
+                          "\r\n                              " +
+                            _vm._s(quizobj.title) +
+                            "\r\n                           "
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          "\r\n                              " +
+                            _vm._s(quizobj.score.totalscore) +
+                            " out of " +
+                            _vm._s(quizobj.quizlist.length * 5) +
+                            "\r\n                           "
+                        ),
+                      ]),
+                    ])
+                  }),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [
+                      _vm._v(
+                        "\r\n                              Total Score\r\n                           "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        "\r\n                               " +
+                          _vm._s(this.finalscore) +
+                          " out of " +
+                          _vm._s(
+                            (_vm.quizdata["1"].quizlist.length +
+                              _vm.quizdata["2"].quizlist.length +
+                              _vm.quizdata["3"].quizlist.length +
+                              _vm.quizdata["4"].quizlist.length +
+                              _vm.quizdata["5"].quizlist.length +
+                              _vm.quizdata["6"].quizlist.length) *
+                              5
+                          ) +
+                          "\r\n                           "
+                      ),
+                    ]),
+                  ]),
+                ],
+                2
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(10),
+      _vm._v(" "),
+      _vm._m(11),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "table",
+        {
+          staticClass: "screening-html-table",
+          attrs: { id: "report_heading" },
+        },
+        [
+          _c("thead", [
+            _c("tr", [
+              _c("th", [
+                _vm._v(
+                  "\r\n                                \r\n                              Indian Scale for Autism Assessment (ISAA)\r\n\r\n                           "
+                ),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("tbody", [
+            _c("tr"),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [
+                _vm._v(
+                  "\r\n                              Testing Time: 30 Minutes\r\n                           "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [
+                _vm._v(
+                  "\r\n                              Patient Name: ..............................\r\n                           "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [
+                _vm._v(
+                  "\r\n                               Date of Test: .............................. \r\n                           "
+                ),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_company_info" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                              untangledX\r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [_c("tr")]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [
+          _vm._v(
+            "\r\n                                \r\n                              Screening Results\r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [
+        _vm._v(
+          "\r\n                               Clinically Reviewed By: .......................\r\n                           "
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_score_breakdown_heading" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                              ISAA Score Breakdown \r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [_c("tr")]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_norms_heading" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                              Norms of ISAA for Diagnosis of Autism \r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [_c("tr")]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_disability_heading" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                               Percentage of Disability as per ISAA Scores\r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [_c("tr")]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mtop-48", attrs: { id: "table_heading_disability" } },
+      [_c("h3", [_vm._v(" Percentage of Disability as per ISAA Scores ")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { colspan: "6" } }, [
+          _vm._v(
+            "\r\n                              Items\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v("\r\n                              Rarely "),
+          _c("br"),
+          _vm._v(
+            " \r\n                              Upto 20% \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v("\r\n                              Sometimes "),
+          _c("br"),
+          _vm._v(
+            " \r\n                              21% - 40%  \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v("\r\n                              Frequently"),
+          _c("br"),
+          _vm._v(
+            " \r\n                              41% - 60% \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v("\r\n                              Mostly "),
+          _c("br"),
+          _vm._v(
+            " \r\n                              61% - 80% \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v("\r\n                              Always "),
+          _c("br"),
+          _vm._v(
+            " \r\n                              81% - 100%  \r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [
+          _vm._v(
+            "\r\n                                \r\n                              Section\r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Scores\r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "screening_verdict_table ",
+        staticStyle: { "margin-top": "120px" },
+      },
+      [
+        _c(
+          "table",
+          {
+            staticClass: "screening-html-table",
+            attrs: { id: "screening-verdict-table" },
+          },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _vm._v(
+                    "\r\n                                \r\n                              ISAA Scores\r\n\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v(
+                    "\r\n                              Degree of Autism\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr"),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              <70\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Normal\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              70-106\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Mild Autism\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              107-153\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Moderate Autism\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              >153\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Severe Autism\r\n                           "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "screening_verdict_table",
+        staticStyle: { "margin-top": "120px" },
+      },
+      [
+        _c(
+          "table",
+          {
+            staticClass: "screening-html-table",
+            attrs: { id: "screening-disabilty-table" },
+          },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _vm._v(
+                    "\r\n                              ISSA Score\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v(
+                    "\r\n                                \r\n                              Percentage of Disability\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr"),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                             <70\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              No Disability\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                             70\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              40%\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                             70-88\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              50%\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                             89-105\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              60%\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                             106-123\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              70%\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                             124-140\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              80%\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                             141-158\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              90%\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                             >158\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              100%\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 

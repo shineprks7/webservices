@@ -1,0 +1,25 @@
+
+.screening_table_wrapper
+{
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+.screening-html-table
+{
+    width: 1240px;
+
+    border-collapse: collapse;
+}
+
+.screening-html-table td
+{
+   border: 1px solid #000;
+}
+
+.screening-html-table th
+{
+   border: 1px solid #000;
+   min-height: 80px;
+}
+
+
