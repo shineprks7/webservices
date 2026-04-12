@@ -1800,9 +1800,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./quizitem.vue */ "./resources/js/screening/screeningcomponents/adhdassessement/quizitem.vue");
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+/* harmony import */ var _screeningreport_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screeningreport.vue */ "./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue");
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 //
 //
@@ -2082,12 +2086,29 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
   components: {
-    'quizitem': _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    'quizitem': _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    'screeningreport': _screeningreport_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -3054,7 +3075,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       }
     }
   },
-  computed: _defineProperty({
+  computed: {
     quiz1Score: function quiz1Score() {
       var result = {
         status: false,
@@ -3377,6 +3398,81 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       result.symptomScore = symScore;
       return result;
     },
+    inattentiveScore: function inattentiveScore() {
+      var inattentiveQuestions = [].concat(_toConsumableArray(this.quizDataStage1), _toConsumableArray(this.quizDataStage2), _toConsumableArray(this.quizDataStage3));
+      var result = {
+        status: false,
+        totalscore: 0,
+        symptomScore: 0
+      };
+      var totalscore = 0;
+      var symScore = 0;
+      inattentiveQuestions.forEach(function (el, index) {
+        if (el.answerChosen != null) {
+          var tempsymScore = 0;
+          totalscore = totalscore + el.answerChosen.score;
+          if (el.answerChosen.score < el.symptomScore) {
+            tempsymScore = 0;
+          } else {
+            tempsymScore = 1;
+          }
+          symScore = symScore + tempsymScore;
+        }
+      });
+      result.status = true;
+      result.totalscore = totalscore;
+      result.symptomScore = symScore;
+      return result;
+    },
+    hyperactiveScore: function hyperactiveScore() {
+      var hyperactiveQuestions = [].concat(_toConsumableArray(this.quizDataStage3), _toConsumableArray(this.quizDataStage5));
+      var result = {
+        status: false,
+        totalscore: 0,
+        symptomScore: 0
+      };
+      var totalscore = 0;
+      var symScore = 0;
+      hyperactiveQuestions.forEach(function (el, index) {
+        if (el.answerChosen != null) {
+          var tempsymScore = 0;
+          totalscore = totalscore + el.answerChosen.score;
+          if (el.answerChosen.score < el.symptomScore) {
+            tempsymScore = 0;
+          } else {
+            tempsymScore = 1;
+          }
+          symScore = symScore + tempsymScore;
+        }
+      });
+      result.status = true;
+      result.totalscore = totalscore;
+      result.symptomScore = symScore;
+      return result;
+    },
+    partAQuiz: function partAQuiz() {
+      var partAQuestions = [this.quizDataStage1[0], this.quizDataStage1[1], this.quizDataStage2[0], this.quizDataStage2[1], this.quizDataStage3[0], this.quizDataStage3[1]];
+      return partAQuestions;
+    },
+    partBQuiz: function partBQuiz() {
+      var partBQuestions = [this.quizDataStage1[2], this.quizDataStage2[2], this.quizDataStage3[2], this.quizDataStage3[3], this.quizDataStage3[4], this.quizDataStage4[0], this.quizDataStage4[1], this.quizDataStage4[2], this.quizDataStage5[0], this.quizDataStage5[1], this.quizDataStage5[2], this.quizDataStage5[3]];
+      return partBQuestions;
+    },
+    allQuizData: function allQuizData() {
+      var finalquiz = {
+        '1': {
+          title: 'partA',
+          quizlist: this.partAQuiz,
+          score: this.partAScore
+        },
+        '2': {
+          title: 'partB',
+          quizlist: this.partBQuiz,
+          score: this.partBScore
+        }
+      };
+      return finalquiz;
+    },
     overallVerdict: function overallVerdict() {
       var verdictmessage = '';
       var rating = 0;
@@ -3388,19 +3484,19 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       var averagescore = 30;
       var belowaveragescore = 20;
       if (this.totalQuizScore > excellentscore) {
-        verdictmessage = 'Excellent';
+        verdictmessage = 'Severe';
         rating = 5;
       } else if (this.totalQuizScore > goodscore) {
-        verdictmessage = 'Good';
+        verdictmessage = 'Moderate';
         rating = 4;
       } else if (this.totalQuizScore > averagescore) {
-        verdictmessage = 'Average';
+        verdictmessage = 'Mild';
         rating = 3;
       } else if (this.totalQuizScore > belowaveragescore) {
-        verdictmessage = 'Below Average';
+        verdictmessage = 'Mild';
         rating = 2;
       } else {
-        verdictmessage = 'Critial';
+        verdictmessage = 'No';
         rating = 1;
       }
       var result = {
@@ -3408,39 +3504,46 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
         'rating': rating
       };
       return result;
-    }
-  }, "overallVerdict", function overallVerdict() {
-    var verdictmessage = '';
-    var rating = 0;
+    },
+    adhdVerdict: function adhdVerdict() {
+      var verdictmessage = '';
+      var rating = 0;
 
-    //  let lengthofquiz = this.quizDataStage1.length + this.quizDataStage2.length + this.quizDataStage3.length + this.quizDataStage4.length + this.quizDataStage5.length ; 
+      //  let lengthofquiz = this.quizDataStage1.length + this.quizDataStage2.length + this.quizDataStage3.length + this.quizDataStage4.length + this.quizDataStage5.length ; 
 
-    var excellentscore = 57;
-    var goodscore = 40;
-    var averagescore = 27;
-    var belowaveragescore = 14;
-    if (this.totalQuizScore > excellentscore) {
-      verdictmessage = 'Excellent';
-      rating = 5;
-    } else if (this.totalQuizScore > goodscore) {
-      verdictmessage = 'Good';
-      rating = 4;
-    } else if (this.totalQuizScore > averagescore) {
-      verdictmessage = 'Average';
-      rating = 3;
-    } else if (this.totalQuizScore > belowaveragescore) {
-      verdictmessage = 'Below Average';
-      rating = 2;
-    } else {
-      verdictmessage = 'Critial';
-      rating = 1;
+      var excellentscore = 57;
+      var goodscore = 40;
+      var averagescore = 30;
+      var belowaveragescore = 20;
+      if (this.partAScore.symptomScore > 3 && this.inattentiveScore.symptomScore > 4 && this.hyperactiveScore.symptomScore > 4) {
+        verdictmessage = 'Very Severe';
+        rating = 5;
+      } else if (this.partAScore.symptomScore > 3 && this.inattentiveScore.symptomScore > 4 || this.hyperactiveScore.symptomScore > 4) {
+        verdictmessage = 'Severe';
+        rating = 4;
+      } else if (this.partAScore.symptomScore < 4 && this.inattentiveScore.symptomScore > 4 && this.hyperactiveScore.symptomScore > 4) {
+        verdictmessage = 'Moderate';
+        rating = 3;
+      } else if (this.partAScore.symptomScore < 4 && this.inattentiveScore.symptomScore > 4 || this.hyperactiveScore.symptomScore > 4) {
+        verdictmessage = 'Moderate';
+        rating = 2;
+      } else if (this.partAScore.symptomScore > 3 && this.inattentiveScore.symptomScore < 5 && this.hyperactiveScore.symptomScore < 5) {
+        verdictmessage = 'Mild to Moderate ';
+        rating = 2;
+      } else if (this.partAScore.symptomScore < 4 && this.inattentiveScore.symptomScore < 5 && this.hyperactiveScore.symptomScore < 5) {
+        verdictmessage = 'Mild to No ';
+        rating = 1;
+      } else {
+        verdictmessage = 'No';
+        rating = 0;
+      }
+      var result = {
+        'verdictrating': verdictmessage,
+        'rating': rating
+      };
+      return result;
     }
-    var result = {
-      'verdictrating': verdictmessage,
-      'rating': rating
-    };
-    return result;
-  })
+  }
 });
 
 /***/ }),
@@ -3661,6 +3764,515 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
+  components: {},
+  data: function data() {
+    return {};
+  },
+  mounted: {},
+  methods: {},
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    'quizdata': [Array, Object],
+    'finalscore': [String, Number],
+    'finalverdict': [Object],
+    'inattentivescore': [String, Number],
+    'hyperactiviscore': [String, Number]
+  },
   components: {},
   data: function data() {
     return {};
@@ -21270,6 +21882,45 @@ component.options.__file = "resources/js/screening/screeningcomponents/adhdasses
 
 /***/ }),
 
+/***/ "./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _screeningreport_vue_vue_type_template_id_659f9a11___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screeningreport.vue?vue&type=template&id=659f9a11& */ "./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=template&id=659f9a11&");
+/* harmony import */ var _screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screeningreport.vue?vue&type=script&lang=js& */ "./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _screeningreport_vue_vue_type_template_id_659f9a11___WEBPACK_IMPORTED_MODULE_0__.render,
+  _screeningreport_vue_vue_type_template_id_659f9a11___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/screening/screeningcomponents/adhdassessement/main.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************!*\
   !*** ./resources/js/screening/screeningcomponents/adhdassessement/main.vue?vue&type=script&lang=js& ***!
@@ -21331,6 +21982,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./radio_unchecked.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/adhdassessement/radio_unchecked.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./screeningreport.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -21398,6 +22065,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_template_id_de06edde___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_template_id_de06edde___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./radio_unchecked.vue?vue&type=template&id=de06edde& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/adhdassessement/radio_unchecked.vue?vue&type=template&id=de06edde&");
+
+
+/***/ }),
+
+/***/ "./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=template&id=659f9a11&":
+/*!***********************************************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=template&id=659f9a11& ***!
+  \***********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_659f9a11___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_659f9a11___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_659f9a11___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./screeningreport.vue?vue&type=template&id=659f9a11& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=template&id=659f9a11&");
 
 
 /***/ }),
@@ -21892,19 +22576,19 @@ var render = function () {
                 },
                 [
                   _vm.partBScore.symptomScore > 6
-                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                    ? _c("h3", { staticClass: "quiz-verdict-warning" }, [
                         _vm._v(
                           "\n\n                             You Show many Symptoms that is consistent with ADHD\n\n                          "
                         ),
                       ])
                     : _vm.partBScore.symptomScore > 3
-                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                    ? _c("h3", { staticClass: "quiz-verdict-warning" }, [
                         _vm._v(
                           "\n\n                             You Show many Symptoms that is consistent with ADHD\n\n                          "
                         ),
                       ])
                     : _vm.partBScore.symptomScore <= 3
-                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                    ? _c("h3", { staticClass: "quiz-verdict-warning" }, [
                         _vm._v(
                           "\n\n                              You show  Some  Symptoms that is consistent with ADHD\n\n                          "
                         ),
@@ -21928,13 +22612,13 @@ var render = function () {
                 },
                 [
                   _vm.partBScore.symptomScore > 10
-                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                    ? _c("h3", { staticClass: "quiz-verdict-warning" }, [
                         _vm._v(
                           "\n\n                             You Show some Symptoms that is consistent with ADHD\n\n                          "
                         ),
                       ])
                     : _vm.partBScore.symptomScore > 6
-                    ? _c("h3", { staticClass: "quiz-verdict-positive" }, [
+                    ? _c("h3", { staticClass: "quiz-verdict-warning" }, [
                         _vm._v(
                           "\n\n                             You Show few Symptoms that is consistent with ADHD\n\n                          "
                         ),
@@ -21955,13 +22639,65 @@ var render = function () {
                 ]
               ),
             ]),
+            _vm._v(" "),
+            _vm.activeStage == 6
+              ? _c("div", [
+                  _c(
+                    "div",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: false,
+                          expression: "false",
+                        },
+                      ],
+                    },
+                    [
+                      _c("screeningreport", {
+                        attrs: {
+                          quizdata: _vm.allQuizData,
+                          finalscore: _vm.totalQuizScore,
+                          finalverdict: _vm.adhdVerdict,
+                          inattentivescore: _vm.inattentiveScore.symptomScore,
+                          hyperactiviscore: _vm.hyperactiveScore.symptomScore,
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm._m(0),
           ]
         ),
       ]),
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mtop-48 screening_report_download_btn_wrapper" },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "screening_report_download",
+            attrs: { id: "screening_report_download" },
+          },
+          [_vm._v(" Download Report ")]
+        ),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
@@ -22162,6 +22898,629 @@ var render = function () {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=template&id=659f9a11&":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/adhdassessement/screeningreport.vue?vue&type=template&id=659f9a11& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render),
+/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("main", [
+    _c("section", { staticClass: "screening-report-prefix" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "mtop-48" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "table",
+          {
+            staticClass: "screening-html-table",
+            attrs: { id: "report_result_heading" },
+          },
+          [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr"),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Symptoms Score " +
+                      _vm._s(this.finalscore) +
+                      " \r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Diagnosis Recommondation: " +
+                      _vm._s(this.finalverdict.verdictrating) +
+                      " ADHD\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _vm._m(3),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(4),
+        _vm._v(" "),
+        _vm._m(5),
+      ]),
+      _vm._v(" "),
+      _vm._m(6),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "screening_table_wrapper ",
+          staticStyle: { "margin-top": "120px" },
+        },
+        [
+          _c(
+            "table",
+            {
+              staticClass: "screening-html-table",
+              attrs: { id: "screening-report-table" },
+            },
+            [
+              _vm._m(7),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                [
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["1"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["1"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.quizid },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                             " +
+                              _vm._s(index + 1) +
+                              "\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c(
+                            "td",
+                            {
+                              key: option.id,
+                              attrs: {
+                                "data-shadedcol":
+                                  option.score >= quiz.symptomScore
+                                    ? "shaded"
+                                    : "noshade",
+                              },
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                                " +
+                                  _vm._s(
+                                    quiz.answerChosen.id &&
+                                      quiz.answerChosen.id == option.id
+                                      ? "X"
+                                      : ""
+                                  ) +
+                                  "\r\n                           "
+                              ),
+                            ]
+                          )
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["2"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["2"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.id },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                             " +
+                              _vm._s(
+                                index + 1 + _vm.quizdata["1"].quizlist.length
+                              ) +
+                              "\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c(
+                            "td",
+                            {
+                              key: option.id,
+                              attrs: {
+                                "data-shadedcol":
+                                  option.score >= quiz.symptomScore
+                                    ? "shaded"
+                                    : "noshade",
+                              },
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                                " +
+                                  _vm._s(
+                                    quiz.answerChosen.id &&
+                                      quiz.answerChosen.id == option.id
+                                      ? "X"
+                                      : ""
+                                  ) +
+                                  "\r\n                           "
+                              ),
+                            ]
+                          )
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("tr"),
+                ],
+                2
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "screening_verdict_table ",
+          staticStyle: { "margin-top": "120px" },
+        },
+        [
+          _c(
+            "table",
+            {
+              staticClass: "screening-html-table",
+              attrs: { id: "screening-score-table" },
+            },
+            [
+              _vm._m(8),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                [
+                  _vm._l(_vm.quizdata, function (quizobj, index) {
+                    return _c("tr", { key: index }, [
+                      _c("td", [
+                        _vm._v(
+                          "\r\n                              " +
+                            _vm._s(quizobj.title) +
+                            "\r\n                           "
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          "\r\n                              " +
+                            _vm._s(quizobj.score.totalscore) +
+                            " out of " +
+                            _vm._s(quizobj.quizlist.length * 5) +
+                            "\r\n                           "
+                        ),
+                      ]),
+                    ])
+                  }),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [
+                      _vm._v(
+                        "\r\n                              Total Score\r\n                           "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        "\r\n                               " +
+                          _vm._s(this.finalscore) +
+                          " out of " +
+                          _vm._s(
+                            (_vm.quizdata["1"].quizlist.length +
+                              _vm.quizdata["2"].quizlist.length) *
+                              5
+                          ) +
+                          "\r\n                           "
+                      ),
+                    ]),
+                  ]),
+                ],
+                2
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "screening_verdict_table ",
+          staticStyle: { "margin-top": "120px" },
+        },
+        [
+          _c(
+            "table",
+            {
+              staticClass: "screening-html-table",
+              attrs: { id: "screening-verdict-table" },
+            },
+            [
+              _vm._m(9),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr"),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _vm._v(
+                      "\r\n                             Inattentiveness\r\n                           "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      "\r\n\r\n                              " +
+                        _vm._s(
+                          this.inattentivescore > 4 ? "Present" : "Negative"
+                        ) +
+                        "\r\n                              \r\n                           "
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _vm._v(
+                      "\r\n                              Hyperactity & Impulsivity\r\n                           "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      "\r\n                              " +
+                        _vm._s(
+                          this.hyperactiviscore > 4 ? "Present" : "Negative"
+                        ) +
+                        "\r\n                           "
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _vm._v(
+                      "\r\n                              Combined Type\r\n                           "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      "\r\n                              " +
+                        _vm._s(
+                          this.inattentivescore > 4 && this.hyperactiviscore > 4
+                            ? "Present"
+                            : "Negative"
+                        ) +
+                        "\r\n\r\n                           "
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]
+          ),
+        ]
+      ),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "table",
+        {
+          staticClass: "screening-html-table",
+          attrs: { id: "report_heading" },
+        },
+        [
+          _c("thead", [
+            _c("tr", [
+              _c("th", [
+                _vm._v(
+                  "\r\n                                \r\n                              Adult ADHD Self-Report Scale (ASRS-v1.1)\r\n\r\n                           "
+                ),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("tbody", [
+            _c("tr"),
+            _vm._v(" "),
+            _c("tr"),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [
+                _vm._v(
+                  "\r\n                              Patient Name: ..............................\r\n                           "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [
+                _vm._v(
+                  "\r\n                               Date: .............................. \r\n                           "
+                ),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_company_info" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                              untangledX\r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [_c("tr")]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [
+          _vm._v(
+            "\r\n                                \r\n                              Screening Results\r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [
+        _vm._v(
+          "\r\n                               Clinically Reviewed By: .......................\r\n                           "
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_score_breakdown_heading" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                              ASRS Score Breakdown \r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [_c("tr")]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_norms_heading" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                              ADHD Subtype Table \r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [_c("tr")]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mtop-48", attrs: { id: "table_heading_disability" } },
+      [_c("h3", [_vm._v(" Percentage of Disability as per ISAA Scores ")])]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { colspan: "6" } }, [
+          _vm._v(
+            "\r\n                              Items\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Never\r\n      \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Rarely \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Sometimes\r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Often\r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Very Often\r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [
+          _vm._v(
+            "\r\n                                \r\n                              Section\r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Scores\r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [
+          _vm._v(
+            "\r\n                                \r\n                             Adhd Sub Type\r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Result\r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
