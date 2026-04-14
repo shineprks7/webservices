@@ -1800,6 +1800,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./quizitem.vue */ "./resources/js/screening/screeningcomponents/anxietyassessment/quizitem.vue");
+/* harmony import */ var _screeningreport_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screeningreport.vue */ "./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 //
 //
@@ -1958,12 +1959,26 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
   components: {
-    'quizitem': _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    'quizitem': _quizitem_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    'screeningreport': _screeningreport_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -2658,6 +2673,16 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       };
       return result;
     },
+    allQuizData: function allQuizData() {
+      var finalquiz = {
+        '1': {
+          title: '',
+          quizlist: this.quizDataStage1,
+          score: this.quiz1Score
+        }
+      };
+      return finalquiz;
+    },
     totalQuizScore: function totalQuizScore() {
       var totalscrores = this.quiz1Score.totalscore;
       return totalscrores;
@@ -2677,19 +2702,19 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       var averagescore = 4;
       var belowaveragescore = 0;
       if (this.totalQuizScore > excellentscore) {
-        verdictmessage = 'Excellent';
+        verdictmessage = 'Severe';
         rating = 5;
       } else if (this.totalQuizScore > goodscore) {
-        verdictmessage = 'Good';
+        verdictmessage = 'Moderate';
         rating = 4;
       } else if (this.totalQuizScore > averagescore) {
-        verdictmessage = 'Average';
+        verdictmessage = 'Mild';
         rating = 3;
       } else if (this.totalQuizScore > belowaveragescore) {
-        verdictmessage = 'Below Average';
+        verdictmessage = 'Minimal';
         rating = 2;
       } else {
-        verdictmessage = 'Critial';
+        verdictmessage = 'Minimal';
         rating = 1;
       }
       var result = {
@@ -2919,6 +2944,418 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
+  components: {},
+  data: function data() {
+    return {};
+  },
+  mounted: {},
+  methods: {},
+  computed: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    'quizdata': [Array, Object],
+    'finalscore': [String, Number],
+    'finalverdict': [Object]
+  },
   components: {},
   data: function data() {
     return {};
@@ -20528,6 +20965,45 @@ component.options.__file = "resources/js/screening/screeningcomponents/anxietyas
 
 /***/ }),
 
+/***/ "./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _screeningreport_vue_vue_type_template_id_549e3fbf___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screeningreport.vue?vue&type=template&id=549e3fbf& */ "./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=template&id=549e3fbf&");
+/* harmony import */ var _screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screeningreport.vue?vue&type=script&lang=js& */ "./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _screeningreport_vue_vue_type_template_id_549e3fbf___WEBPACK_IMPORTED_MODULE_0__.render,
+  _screeningreport_vue_vue_type_template_id_549e3fbf___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/screening/screeningcomponents/anxietyassessment/main.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************!*\
   !*** ./resources/js/screening/screeningcomponents/anxietyassessment/main.vue?vue&type=script&lang=js& ***!
@@ -20589,6 +21065,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./radio_unchecked.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/radio_unchecked.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_radio_unchecked_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./screeningreport.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -20660,6 +21152,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=template&id=549e3fbf&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=template&id=549e3fbf& ***!
+  \*************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_549e3fbf___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_549e3fbf___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_screeningreport_vue_vue_type_template_id_549e3fbf___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./screeningreport.vue?vue&type=template&id=549e3fbf& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=template&id=549e3fbf&");
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/main.vue?vue&type=template&id=0ecec274&":
 /*!*****************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/main.vue?vue&type=template&id=0ecec274& ***!
@@ -20708,7 +21217,7 @@ var render = function () {
                 class: _vm.activeStage == 6 ? "active" : "",
                 on: {
                   click: function ($event) {
-                    return _vm.goToStage(6)
+                    return _vm.goToStage(2)
                   },
                 },
               },
@@ -20915,13 +21424,63 @@ var render = function () {
                 ),
               ]),
             ]),
+            _vm._v(" "),
+            _vm.activeStage == 2
+              ? _c("div", [
+                  _c(
+                    "div",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: false,
+                          expression: "false",
+                        },
+                      ],
+                    },
+                    [
+                      _c("screeningreport", {
+                        attrs: {
+                          quizdata: _vm.allQuizData,
+                          finalscore: _vm.totalQuizScore,
+                          finalverdict: _vm.overallVerdict,
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm._m(0),
           ]
         ),
       ]),
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mtop-48 screening_report_download_btn_wrapper" },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "screening_report_download",
+            attrs: { id: "screening_report_download" },
+          },
+          [_vm._v(" Download Report ")]
+        ),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
@@ -21122,6 +21681,436 @@ var render = function () {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=template&id=549e3fbf&":
+/*!****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/screening/screeningcomponents/anxietyassessment/screeningreport.vue?vue&type=template&id=549e3fbf& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render),
+/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("main", [
+    _c("section", { staticClass: "screening-report-prefix" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "mtop-48" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "table",
+          {
+            staticClass: "screening-html-table",
+            attrs: { id: "report_result_heading" },
+          },
+          [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr"),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Symptoms Score " +
+                      _vm._s(this.finalscore) +
+                      " \r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Diagnosis Recommondation: " +
+                      _vm._s(this.finalverdict.verdictrating) +
+                      " Anxiety\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _vm._m(3),
+            ]),
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(4),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "screening_table_wrapper ",
+          staticStyle: { "margin-top": "120px" },
+        },
+        [
+          _c(
+            "table",
+            {
+              staticClass: "screening-html-table",
+              attrs: { id: "screening-report-table" },
+            },
+            [
+              _vm._m(5),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                [
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "12" } }, [
+                      _vm._v(
+                        "\r\n\r\n                           " +
+                          _vm._s(_vm.quizdata["1"].title) +
+                          "\r\n\r\n                        "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.quizdata["1"].quizlist, function (quiz, index) {
+                    return _c(
+                      "tr",
+                      { key: quiz.quizid },
+                      [
+                        _c("td", [
+                          _vm._v(
+                            "\r\n                             " +
+                              _vm._s(index + 1) +
+                              "\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { attrs: { colspan: "5" } }, [
+                          _vm._v(
+                            "\r\n                              " +
+                              _vm._s(quiz.title) +
+                              "\r\n\r\n                           "
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(quiz.options, function (option) {
+                          return _c(
+                            "td",
+                            {
+                              key: option.id,
+                              attrs: {
+                                "data-shadedcol":
+                                  option.score >= quiz.symptomScore
+                                    ? "shaded"
+                                    : "noshade",
+                              },
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                                " +
+                                  _vm._s(
+                                    quiz.answerChosen.id &&
+                                      quiz.answerChosen.id == option.id
+                                      ? "X"
+                                      : ""
+                                  ) +
+                                  "\r\n                           "
+                              ),
+                            ]
+                          )
+                        }),
+                      ],
+                      2
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("tr"),
+                ],
+                2
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(6),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "table",
+        {
+          staticClass: "screening-html-table",
+          attrs: { id: "report_heading" },
+        },
+        [
+          _c("thead", [
+            _c("tr", [
+              _c("th", [
+                _vm._v(
+                  "\r\n                                \r\n                              GAD-7 Anxiety Scale\r\n\r\n                           "
+                ),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("tbody", [
+            _c("tr"),
+            _vm._v(" "),
+            _c("tr"),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [
+                _vm._v(
+                  "\r\n                              Patient Name: ..............................\r\n                           "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [
+                _vm._v(
+                  "\r\n                               Date: .............................. \r\n                           "
+                ),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_company_info" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                              untangledX\r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [_c("tr")]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [
+          _vm._v(
+            "\r\n                                \r\n                              Screening Results\r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [
+        _vm._v(
+          "\r\n                               Clinically Reviewed By: .......................\r\n                           "
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "table",
+      {
+        staticClass: "screening-html-table",
+        attrs: { id: "report_score_breakdown_heading" },
+      },
+      [
+        _c("thead", [
+          _c("tr", [
+            _c("th", [
+              _vm._v(
+                "\r\n                                \r\n                              Scoring GAD-7 Anxiety Severity \r\n\r\n                           "
+              ),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [
+              _vm._v(
+                '\r\n                           This is calculated by assigning scores of 0, 1, 2, and 3 to the response categories, respectively, of "not at all," "several days,"" "more than half the days," and “nearly every day." GAD-7 total score for the seven items ranges from 0 to 21.\r\n                        '
+              ),
+            ]),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { colspan: "6" } }, [
+          _vm._v(
+            "\r\n                               Over the last two weeks, how often have you been bothered by the following problems? \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Not at all\r\n      \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                              Several days \r\n \r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                               More than half the days\r\n\r\n\r\n                           "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v(
+            "\r\n                                Nearly every day \r\n\r\n\r\n                           "
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "screening_verdict_table ",
+        staticStyle: { "margin-top": "120px" },
+      },
+      [
+        _c(
+          "table",
+          {
+            staticClass: "screening-html-table",
+            attrs: { id: "screening-score-table" },
+          },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _vm._v(
+                    "\r\n                                \r\n                              Score\r\n\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v(
+                    "\r\n                              Severity\r\n\r\n                           "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              0-4  \r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              Minimal Anxiety\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              5-9\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                               Mild Anxiety\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              10 - 14\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                               Moderate Anxiety\r\n                           "
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _vm._v(
+                    "\r\n                              15 - 21\r\n                           "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\r\n                               Severe Anxiety\r\n                           "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]
+        ),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
