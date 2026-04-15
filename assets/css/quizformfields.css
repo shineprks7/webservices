@@ -720,6 +720,18 @@ taxform-text-field-wrapper .text-field::hover
     
 
 }
+.quiz-transition .tax-form-options-wrapper
+{
+
+  animation-name: slideFromLeftBgPattern;
+    animation-fill-mode: forwards;
+
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+
+    
+    
+}
 
 .quiz-score-wrapper
 {
@@ -853,6 +865,19 @@ taxform-text-field-wrapper .text-field::hover
     opacity: 1;
   }
 }
+@keyframes slideFromLeftBgPattern {
+  0%{
+     background-size: 60px 60px;
+ 
+  }
+  
+  100%{
+     background-size: 4px 4px;
+
+  }
+}
+
+
 
 
 @media (max-width:820px)  { 
