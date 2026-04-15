@@ -2755,19 +2755,19 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       var averagescore = 9;
       var belowaveragescore = 4;
       if (this.totalQuizScore > excellentscore) {
-        verdictmessage = 'Excellent';
+        verdictmessage = 'Severe';
         rating = 5;
       } else if (this.totalQuizScore > goodscore) {
-        verdictmessage = 'Good';
+        verdictmessage = 'Moderately Severe';
         rating = 4;
       } else if (this.totalQuizScore > averagescore) {
-        verdictmessage = 'Average';
+        verdictmessage = 'Moderate';
         rating = 3;
       } else if (this.totalQuizScore > belowaveragescore) {
-        verdictmessage = 'Below Average';
+        verdictmessage = 'Mild';
         rating = 2;
       } else {
-        verdictmessage = 'Critial';
+        verdictmessage = 'None or Minimal';
         rating = 1;
       }
       var result = {
