@@ -905,6 +905,16 @@ taxform-text-field-wrapper .text-field::hover
 .form-container
 {
   padding: 48px 12px;
+
+      box-shadow: -4px -4px 12px 0px rgba(0,0,0,0.15) , 4px 4px 0px 0px rgba(0,0,0,1) ;
+
+  border-radius: 8px;
+}
+
+.tax-form-options-wrapper
+{
+  border-radius: 8px;
+  border-width: 4px;
 }
 
 .taxform-results-card-title
