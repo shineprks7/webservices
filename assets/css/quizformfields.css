@@ -842,8 +842,11 @@ taxform-text-field-wrapper .text-field::hover
 
     cursor: pointer;
 
-    background-color: #ddd;
+background-color: #fff;
+    color: blue;
+    padding: 16px 24px;
     
+    border-radius: 8px;    
     
 
 }
