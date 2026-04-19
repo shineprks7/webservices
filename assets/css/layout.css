@@ -1699,8 +1699,19 @@ font-size: 64px;
     min-height: 400px;
     position: relative;
     z-index: 2;
+    padding-top: 48px;
     
 
+}
+
+.site-logo-text
+{
+    margin-left: 12px !important;
+}
+
+.footer-logo-text
+{
+    margin-left:0px !important;
 }
 
 }
