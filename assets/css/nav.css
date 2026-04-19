@@ -296,6 +296,7 @@
   font-family: 'Inter' !important;
 
           letter-spacing: 1.2px;
+ font-size: inherit;
 }
 @media (max-width:1260px)  { 
   
