@@ -448,6 +448,121 @@ taxform-text-field-wrapper .text-field::hover
   border-top-color: #06af3e ;
 }
 
+
+.quizform-progress-wrapper
+{
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(12,minmax(10px, 1fr));
+   
+    gap:8px;
+
+
+    padding: 0px;
+
+
+   /* overflow: hidden; */
+   color: #fff;
+
+   margin-top: 24px;
+   margin-bottom: 48px;
+
+}
+
+.quizform-grid-progress-part
+{
+    
+   padding: 4px 4px;
+   position: relative;
+
+      grid-column: span 2;
+    background-image: linear-gradient(to right, #c7c6c6 1px, transparent 1px), linear-gradient(to bottom, #c7c6c6 1px, transparent 1px);
+
+    background:#c7c6c6 ;
+   background-size:4px 4px;
+    border: 1px solid #c7c6c6;
+
+}
+
+.quizform-grid-progress-part.active {
+
+
+
+            background:#5A66BB ;
+
+}
+.quizform-grid-progress-part.completed {
+
+
+
+            background:#5A66BB ;
+
+}
+.quizform-grid-progress-part::after
+{
+ 
+  content: '';
+
+  position: absolute;
+
+  width: 0px;
+  height: 0px;
+
+
+  top:100%;
+  left: 50%;
+
+  border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+   border-top: 12px solid #5A66BB;
+
+  transform: translate(-50%,0);
+
+  display: none;
+
+}
+
+.quizform-grid-progress-part.active::after 
+
+{
+  display: block;
+
+
+
+}
+
+.quizform-progress-wrapper-7-grid
+
+{
+     grid-template-columns: repeat(14,minmax(10px, 1fr)) !important;
+ 
+}
+
+.quizform-heading-number
+{
+  display: block;
+  margin-bottom: 16px;
+  border: 0px solid #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  box-shadow: 4px 2px 0px 0px #757575 , -2px -2px 4px 0px rgba(0,0,0,0.15);
+   
+  background-color: #000;
+}
+
+.quizform-grid-progress-6-group::after
+{
+  border-top-color: #030a46 ;
+}
+
+
+
 .anxiety-progress-wrapper
 {
   

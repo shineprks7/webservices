@@ -2041,6 +2041,39 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3769,6 +3802,15 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
           this.activeStage = stagenumber;
           this.activeSubStage = 1;
         }
+      }
+    },
+    checkStageCompletionStatus: function checkStageCompletionStatus(stagenumber) {
+      var stagename = "stage" + stagenumber;
+      var checkstagestatus = this.stages[stagename]['completed'];
+      if (checkstagestatus) {
+        return true;
+      } else {
+        return false;
       }
     },
     goToSubStage: function goToSubStage(stagenumber, substagenumber) {
@@ -23009,6 +23051,120 @@ var render = function () {
         _c(
           "div",
           {
+            staticClass:
+              "quizform-progress-wrapper quizform-progress-wrapper-7-grid",
+          },
+          [
+            _c("div", {
+              staticClass: " quizform-grid-progress-part ",
+              class:
+                _vm.activeStage == 1
+                  ? "active"
+                  : _vm.checkStageCompletionStatus(1)
+                  ? "completed"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.goToStage(1)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "quizform-grid-progress-part",
+              class:
+                _vm.activeStage == 2
+                  ? "active"
+                  : _vm.checkStageCompletionStatus(1)
+                  ? "completed"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.goToStage(2)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: " quizform-grid-progress-part",
+              class:
+                _vm.activeStage == 3
+                  ? "active"
+                  : _vm.checkStageCompletionStatus(2)
+                  ? "completed"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.goToStage(3)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: " quizform-grid-progress-part",
+              class:
+                _vm.activeStage == 4
+                  ? "active"
+                  : _vm.checkStageCompletionStatus(3)
+                  ? "completed"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.goToStage(4)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: " quizform-grid-progress-part",
+              class:
+                _vm.activeStage == 5
+                  ? "active"
+                  : _vm.checkStageCompletionStatus(4)
+                  ? "completed"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.goToStage(5)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: " quizform-grid-progress-part",
+              class:
+                _vm.activeStage == 6
+                  ? "active"
+                  : _vm.checkStageCompletionStatus(5)
+                  ? "completed"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.goToStage(6)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: " quizform-grid-progress-part",
+              class:
+                _vm.activeStage == 7
+                  ? "active"
+                  : _vm.checkStageCompletionStatus(6)
+                  ? "completed"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.goToStage(6)
+                },
+              },
+            }),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
             directives: [
               {
                 name: "show",
@@ -23021,7 +23177,10 @@ var render = function () {
           },
           [
             _c("h3", { staticClass: "taxform-heading-label" }, [
-              _vm._v(" SOCIAL RELATIONSHIP AND RECIPROCITY "),
+              _c("span", { staticClass: "quizform-heading-number" }, [
+                _vm._v(" I "),
+              ]),
+              _vm._v("  SOCIAL RELATIONSHIP AND RECIPROCITY "),
               _c("span", { staticClass: "sub-quiz-counter" }, [
                 _vm._v(
                   " (" +
@@ -23088,7 +23247,10 @@ var render = function () {
           },
           [
             _c("h3", { staticClass: "taxform-heading-label" }, [
-              _vm._v(" EMOTIONAL RESPONSIVENESS  "),
+              _c("span", { staticClass: "quizform-heading-number" }, [
+                _vm._v(" II "),
+              ]),
+              _vm._v("  EMOTIONAL RESPONSIVENESS  "),
               _c("span", { staticClass: "sub-quiz-counter" }, [
                 _vm._v(
                   " (" +
@@ -23155,7 +23317,10 @@ var render = function () {
           },
           [
             _c("h3", { staticClass: "taxform-heading-label" }, [
-              _vm._v(" SPEECH-LANGUAGE AND COMMUNICATION  "),
+              _c("span", { staticClass: "quizform-heading-number" }, [
+                _vm._v(" III "),
+              ]),
+              _vm._v("  SPEECH-LANGUAGE AND COMMUNICATION  "),
               _c("span", { staticClass: "sub-quiz-counter" }, [
                 _vm._v(
                   " (" +
@@ -23222,6 +23387,9 @@ var render = function () {
           },
           [
             _c("h3", { staticClass: "taxform-heading-label" }, [
+              _c("span", { staticClass: "quizform-heading-number" }, [
+                _vm._v(" IV "),
+              ]),
               _vm._v(" BEHAVIOUR PATTERNS  "),
               _c("span", { staticClass: "sub-quiz-counter" }, [
                 _vm._v(
@@ -23289,6 +23457,9 @@ var render = function () {
           },
           [
             _c("h3", { staticClass: "taxform-heading-label" }, [
+              _c("span", { staticClass: "quizform-heading-number" }, [
+                _vm._v(" V "),
+              ]),
               _vm._v(" Sensory Aspects "),
               _c("span", { staticClass: "sub-quiz-counter" }, [
                 _vm._v(
@@ -23356,6 +23527,9 @@ var render = function () {
           },
           [
             _c("h3", { staticClass: "taxform-heading-label" }, [
+              _c("span", { staticClass: "quizform-heading-number" }, [
+                _vm._v(" VI "),
+              ]),
               _vm._v(" COGNITIVE COMPONENT "),
               _c("span", { staticClass: "sub-quiz-counter" }, [
                 _vm._v(
