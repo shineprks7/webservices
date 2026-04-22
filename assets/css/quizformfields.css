@@ -22,6 +22,86 @@ h1, h2, h3, h4, h5, h6
 
 }
 
+.form-header-row
+{
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  
+  flex-wrap: wrap;
+
+  align-items: center;
+}
+
+.form-spacer
+{
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+.form-header-icon-wrap svg
+{
+  width: 32px;
+  height: 32px;
+
+  
+
+}
+
+.form-header-icon-wrap
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #000;
+  box-shadow: 4px 2px 0px 0px #757575 , -2px -2px 4px 0px rgba(0,0,0,0.15);
+
+}
+
+
+.form-reset-button
+{
+   padding: 12px 24px;
+
+   border-radius: 12px;
+   text-align: center;
+
+   min-width: 180px;
+
+   font-size: 18px;
+   line-height: 32px;
+
+   background-color: #fff;
+
+   cursor: pointer;
+     
+    background-color: #000;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap:24px;
+
+   color:#fff;
+
+}
+.form-reset-icon-wrap
+{
+  display: inline-block;
+}
+.form-reset-icon-wrap svg
+{
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
 .tax-form-field-wrapper
 {
     padding-left: 60px;
