@@ -41,7 +41,7 @@ const doc = new window.jspdf.jsPDF(); // Use the window namespace
 }
 
 
-async function generatePdf2()
+async function generatePdf2(event)
 {
 
     const doc = new jspdf.jsPDF('p','pt','a4');
@@ -377,6 +377,66 @@ currentY = doc.lastAutoTable.finalY + 20;
 doc.save('depression_screening_report.pdf');
 
 
+console.log("download started");
+
+endDownloadprogress(event);
+
+}
+
+function downloadprogresstrack(event)
+{
+
+   let currenttarget = event.currentTarget;
+
+   currenttarget.classList.add('download-in-progress');
+
+   console.log("download in progress");
+
+  
+   
+
+   
+}
+
+function endDownloadprogress(event)
+{
+
+   let currenttarget = event.currentTarget;
+
+   setTimeout( () => 
+   {
+
+   currenttarget.classList.remove('download-in-progress');
+
+   console.log("download in progress");
+
+   }, 3000);
+
+
+
+  
+   
+
+   
+}
+
+function throttle(func, limit)
+{
+   let inThrottle;
+
+   return function(...args)
+   {
+    const context = this;
+
+    if(!inThrottle)
+    {
+      func.apply(context,args);
+      inThrottle = true;
+
+      setTimeout(() => inThrottle = false , limit);
+
+    }
+   }
 }
 
 
@@ -386,13 +446,24 @@ doc.save('depression_screening_report.pdf');
 
      document.addEventListener('DOMContentLoaded', function(){
 
-          //  generatePdf2();
+        
+
 
         const screendownloadbtn = document.querySelector('#screening_report_download')
 
+        const handledownload = throttle((event) =>{
+            
+          downloadprogresstrack(event);
+
+          generatePdf2(event);
+
+        }
+        , 3000)
 
                    screendownloadbtn.addEventListener('click', function( event ){
-                                  generatePdf2();
+                                 
+                    
+                      handledownload(event);
 
 
                    });

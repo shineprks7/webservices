@@ -2095,6 +2095,13 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2588,6 +2595,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       parselocaldataitem.initialdata = JSON.parse(JSON.stringify(this.initialdata));
       Object.assign(this.$data, parselocaldataitem);
       console.log("Initial Data Retrieved");
+      this.sustainData();
     },
     isObject: function isObject(value) {
       return _typeof(value) === 'object' && value !== null && !Array.isArray(value);
@@ -21982,7 +21990,15 @@ var staticRenderFns = [
             staticClass: "screening_report_download",
             attrs: { id: "screening_report_download" },
           },
-          [_vm._v(" Download Report ")]
+          [
+            _c("span", { staticClass: "download-not-in-progress-text" }, [
+              _vm._v(" Download Report "),
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "download-in-progress-text" }, [
+              _vm._v(" Downloading Report  "),
+            ]),
+          ]
         ),
       ]
     )

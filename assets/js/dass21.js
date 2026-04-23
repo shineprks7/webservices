@@ -2956,6 +2956,7 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
       parselocaldataitem.initialdata = JSON.parse(JSON.stringify(this.initialdata));
       Object.assign(this.$data, parselocaldataitem);
       console.log("Initial Data Retrieved");
+      this.sustainData();
     },
     isObject: function isObject(value) {
       return _typeof(value) === 'object' && value !== null && !Array.isArray(value);
