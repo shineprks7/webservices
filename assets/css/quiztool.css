@@ -46,7 +46,41 @@
 }
 
 
+.download-in-progress-text
+{
 
+    display: none;
+
+}
+
+.download-not-in-progress-text
+{
+
+    display: inline-block;
+
+}
+
+.download-in-progress
+{
+    pointer-events: none;
+    cursor:not-allowed;
+
+    
+}
+
+.download-in-progress .download-in-progress-text
+{
+
+    display: inline-block;
+
+}
+
+.download-in-progress .download-not-in-progress-text
+{
+
+    display: none;
+
+}
 
 
 
