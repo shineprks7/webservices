@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6
    min-width: 180px;
 
    font-size: 18px;
-   line-height: 32px;
+   line-height: 27px;
 
    background-color: #fff;
 
@@ -899,7 +899,7 @@ taxform-text-field-wrapper .text-field::hover
 .taxtool-information-section p
 {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
   letter-spacing: 0.03em;
 
   color:#312a2a;
@@ -1033,7 +1033,7 @@ taxform-text-field-wrapper .text-field::hover
    
     
     font-size: 20px;
-    line-height: 24px;
+    line-height: 28px;
 
     font-weight: bold;
 
@@ -1092,7 +1092,7 @@ background-color: #fff;
 .taxtool-information-section p
 {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 27px;
 }
 .article-list-item
 {
