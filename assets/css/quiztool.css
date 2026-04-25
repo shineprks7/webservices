@@ -1,7 +1,25 @@
+
+.screening-title-container
+{
+    background-color: #0C0840;
+    width: 100%;
+
+
+    padding-left: 48px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+
+
 .taxtool-information-section
 {
     padding-top:120px;
     padding-bottom: 120px;
+
+    background-color: #05fadd;
+
+
 }
 
 .form-container
@@ -135,6 +153,13 @@
 }
 
 @media (max-width:820px)  { 
+
+    .screening-title-container
+
+    {
+
+        padding-left: 8px;
+    }
 
 .form-container
 {

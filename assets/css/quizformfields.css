@@ -898,11 +898,12 @@ taxform-text-field-wrapper .text-field::hover
 
 .taxtool-information-section p
 {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 27px;
   letter-spacing: 0.03em;
 
-  color:#312a2a;
+  color:#222222;
+  
 }
 .quiz-transition
 {
