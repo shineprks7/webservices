@@ -167,6 +167,12 @@ border-radius: 24px;
     
 }
 
+.screening-take-test-wrapper-inner
+{
+    max-width: auto;
+
+}
+
 .screening-take-test-btn-wrapper
 {
     background-color: #000;
@@ -559,6 +565,13 @@ border-radius: 24px;
 
         padding-left: 24px;
     }
+
+    
+.screening-take-test-wrapper-inner
+{
+    max-width: 320px;
+
+}
 
 .form-container
 {
