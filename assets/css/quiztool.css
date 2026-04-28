@@ -171,6 +171,17 @@ border-radius: 24px;
 {
     max-width: auto;
 
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.screening-take-test-timing-information
+{
+    width: 90%;
+
+    max-width: 600px;
 }
 
 .screening-take-test-btn-wrapper
@@ -569,7 +580,7 @@ border-radius: 24px;
     
 .screening-take-test-wrapper-inner
 {
-    max-width: 320px;
+    max-width: 100%;
 
 }
 
