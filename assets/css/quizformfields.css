@@ -114,6 +114,8 @@ h1, h2, h3, h4, h5, h6
     line-height: 40px; */
 
     color:#757575;
+    color:#372748;
+
 
     font-size: 18px;
     line-height: 24px;
@@ -450,6 +452,11 @@ taxform-text-field-wrapper .text-field::hover
    grid-column: span 2;
    background-color: #5A66BB;
 
+   background-color: #E191F2;
+
+           color:#6C5073;
+
+
        border-top-left-radius: 12px;
        border-bottom-left-radius: 12px;
 
@@ -468,6 +475,8 @@ taxform-text-field-wrapper .text-field::hover
 .taxform-grid-progress-part-1::after
 {
   border-top-color: #5A66BB ;
+     border-top-color: #E191F2;
+
 }
 
 .taxform-grid-progress-part-2
@@ -475,11 +484,15 @@ taxform-text-field-wrapper .text-field::hover
       grid-column: span 2;
     background-color: #2B3BB8;
 
+    background-color: #A191F2;
+
 }
 
 .taxform-grid-progress-part-2::after
 {
   border-top-color: #2B3BB8 ;
+      border-top-color: #A191F2;
+
 }
 
 .taxform-grid-progress-part-3
@@ -487,22 +500,37 @@ taxform-text-field-wrapper .text-field::hover
        grid-column: span 2;
     background-color: #081891;
 
+    background-color: #6C5073;
+    color:#C8C878;
+
+
 }
 
 .taxform-grid-progress-part-3::after
 {
   border-top-color: #081891 ;
+
+      border-top-color: #6C5073;
+
 }
 .taxform-grid-progress-part-4
 {
        grid-column: span 2;
     background-color: #040f6f;
 
+    background-color: #C8C878;
+
+        color:#6C5073;
+
+
 }
 
 .taxform-grid-progress-part-4::after
 {
   border-top-color: #040f6f ;
+    border-top-color: #C8C878;
+
+
 }
 
 .taxform-grid-progress-part-5
@@ -510,11 +538,14 @@ taxform-text-field-wrapper .text-field::hover
        grid-column: span 2;
     background-color: #030a46;
 
+    background-color: #9161e9;
+
 }
 
 .taxform-grid-progress-part-5::after
 {
   border-top-color: #030a46 ;
+  border-top-color: #9161e9;
 }
 
 
@@ -1008,6 +1039,8 @@ taxform-text-field-wrapper .text-field::hover
 {
 
     color: #757575;
+    color:#372748;
+
     display: inline-block;
 
 }
