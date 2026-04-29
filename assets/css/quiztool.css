@@ -197,7 +197,7 @@ border-radius: 24px;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    min-height: 240px;
+    min-height: 360px;
     width: 800px;
     max-width: 100%;
     margin-left: 0px;
@@ -264,7 +264,7 @@ border-radius: 24px;
 .screening-take-test-timing-information .flex-icon
 {
  
-  grid-column:auto;
+  grid-column:span 12;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,13 +272,13 @@ border-radius: 24px;
 }
 .screening-take-test-timing-information img
 {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
 .screening-take-test-timing-information .flex-content
 {
-       grid-column: span 10;
+       grid-column: span 12;
        justify-content: center;
   align-items: center;
   text-align: center;
