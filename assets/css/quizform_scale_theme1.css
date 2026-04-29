@@ -5,7 +5,7 @@
 
    background-color: #E191F2;
 
-           color:#6C5073;
+           color:#372748;
 
 
        border-top-left-radius: 12px;
@@ -26,6 +26,8 @@
     background-color: #2B3BB8;
 
     background-color: #A191F2;
+
+    color:#372748;
 
 }
 
@@ -96,6 +98,7 @@
        grid-column: span 2;
         grid-column: span 2;
     background-color: #06af3e;
+    background-color: #372748;
  border-top-right-radius: 12px;
        border-bottom-right-radius: 12px;
 
@@ -104,5 +107,8 @@
 .taxform-grid-progress-part-6::after
 {
   border-top-color: #06af3e ;
+    border-top-color: #372748 ;
+
+
 }
 
