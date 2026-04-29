@@ -216,15 +216,16 @@ border-radius: 24px;
 }
 .screening-take-test-timing-information
 {
-    width: 90%;
+    width: 100%;
 
     max-width: 600px;
+    padding: 24px;
 }
 
 .screening-take-test-btn-wrapper
 {
     background-color: #000;
-    color:#fff;
+    color:#fff !important;
     display: flex;
     justify-content: space-around;
 
@@ -235,7 +236,14 @@ border-radius: 24px;
     padding: 24px 24px;
     cursor: pointer;
 }
-
+.screening-take-test-btn-wrapper:hover
+{
+    color:#c7c6c6 !important;
+}
+.screening-take-test-btn-wrapper:active
+{
+    color:#fff !important;
+}
 .screening-take-test-timing-information
 {
     width: 100%;
@@ -251,11 +259,15 @@ border-radius: 24px;
     justify-content: center;
 
 
+
 }
 .screening-take-test-timing-information .flex-icon
 {
  
-  grid-column: span auto;
+  grid-column:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 .screening-take-test-timing-information img
@@ -267,6 +279,9 @@ border-radius: 24px;
 .screening-take-test-timing-information .flex-content
 {
        grid-column: span 10;
+       justify-content: center;
+  align-items: center;
+  text-align: center;
 
 
 }
@@ -722,6 +737,36 @@ border-radius: 24px;
 .screening-title-flex-box
 {
     justify-content: center;
+}
+
+.screening-take-test-timing-information .flex-icon
+{
+ 
+  grid-column:span 12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.screening-take-test-wrapper
+{
+    min-height: 360px;
+}
+.screening-take-test-timing-information img
+{
+    width: 32px;
+    height: 32px;
+}
+
+.screening-take-test-timing-information .flex-content
+{
+       grid-column: span 12;
+       justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
 }
 
 
