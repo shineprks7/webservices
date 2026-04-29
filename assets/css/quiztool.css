@@ -1,4 +1,56 @@
 
+.screening-title-breadcrumb-wrapper
+{
+    
+}
+
+.screening-title-breadcrumb-wrapper .bread-crumb-link
+{
+    display: inline-block;
+
+   position: relative;
+
+   line-height: 36px;
+
+   vertical-align: middle;
+
+   font-size: 20px;
+
+   cursor: pointer;
+
+
+
+}
+.screening-title-breadcrumb-wrapper .bread-crumb-link::after
+{
+   position: relative;
+    content:'>';
+    font-size: 20px;
+    line-height: 36px;
+
+    vertical-align: middle;
+    padding:0px 8px;
+
+
+    color:#565073;
+
+    display: inline-block;
+}
+
+.screening-title-breadcrumb-wrapper .bread-crumb-active-page
+{
+ display: inline-block;
+
+   position: relative;
+
+   line-height: 36px;
+
+   vertical-align: middle;
+
+   font-size: 20px;
+       color:#565073;
+
+}
 
 .faq-section-wrapper
 {
